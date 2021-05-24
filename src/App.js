@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import Adminlayout from './layouts/Adminlayout';
+import './styles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+         {/* Route Admin */}
+
+         <Route path="/admin">
+            <Adminlayout>
+              {/* <Switch>
+                <Redirect exact from="/admin" to="/admin/courses" />
+                <Route path="/admin/courses">
+                  <AdminCourses />
+                </Route>
+                <Route path="/admin/users">
+                  <AdminUsers />
+                </Route>
+              </Switch> */}
+            </Adminlayout>
+          </Route>
+          {/* Route Main */}
+        {/* <Route path="/">
+         
+          
+          <Applayout >
+            <Switch>
+              <Route path="/" exact>
+                <Home />
+              </Route>
+              <Route path="/courses/:category">
+                <Coursess />
+              </Route>
+              <Route path="/course/:courseId">
+                <Course />
+              </Route>
+            </Switch>
+          </Applayout>
+        </Route> */}
+      </Switch>
+    </BrowserRouter>
   );
 }
 
