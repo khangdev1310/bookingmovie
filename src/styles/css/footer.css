@@ -1,0 +1,70 @@
+#footer {
+  background-color: #222;
+  padding: 20px 0;
+  color: #949494;
+}
+
+#footer .myFooter {
+  max-width: 940px;
+  float: none;
+  margin: auto;
+  clear: both;
+}
+
+#footer .myFooter .row div > .title {
+  font-size: 80%;
+  padding: 0 15px 20px 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#footer .myFooter .row div > .title.title-about {
+  font-size: 40px;
+  color: orange;
+}
+
+#footer .myFooter .linePartner {
+  margin-bottom: 15px;
+  padding: 0 15px;
+}
+
+#footer .myFooter .linePartner a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#footer .myFooter .linePartner a .iconConnect {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+  transition: all 0.25s;
+}
+
+#footer .myFooter .linePartner a .iconConnect:hover {
+  opacity: 0.7;
+}
+
+#footer .myFooter .support a {
+  font-size: 12px !important;
+  font-size: 80%;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #949494;
+  display: block;
+  transition: all 0.2s;
+  line-height: 2.3;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+#footer .myFooter .support a:hover {
+  color: #fff;
+}
+
+#footer .myFooter .hrFooter {
+  border-top: 1px solid #4a4a4a;
+}
+/*# sourceMappingURL=footer.css.map */

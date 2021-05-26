@@ -1,16 +1,17 @@
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import Adminlayout from './layouts/Adminlayout';
-import './styles';
+import Adminlayout from "./layouts/Adminlayout";
+import "./styles";
+import Footer from "./components/Footer/index";
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
-         {/* Route Admin */}
+        {/* Route Admin */}
 
-         <Route path="/admin">
-            <Adminlayout>
-              {/* <Switch>
+        <Route path="/admin">
+          <Adminlayout>
+            {/* <Switch>
                 <Redirect exact from="/admin" to="/admin/courses" />
                 <Route path="/admin/courses">
                   <AdminCourses />
@@ -19,9 +20,12 @@ function App() {
                   <AdminUsers />
                 </Route>
               </Switch> */}
-            </Adminlayout>
-          </Route>
-          {/* Route Main */}
+          </Adminlayout>
+        </Route>
+        <Route path="/">
+          <Footer />
+        </Route>
+        {/* Route Main */}
         {/* <Route path="/">
          
           
