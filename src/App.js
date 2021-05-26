@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Adminlayout from './layouts/Adminlayout';
+import Applayout from "./layouts/Applayout";
 import './styles';
 
 function App() {
@@ -22,11 +23,11 @@ function App() {
             </Adminlayout>
           </Route>
           {/* Route Main */}
-        {/* <Route path="/">
+        <Route path="/">
          
           
           <Applayout >
-            <Switch>
+            {/* <Switch>
               <Route path="/" exact>
                 <Home />
               </Route>
@@ -36,9 +37,9 @@ function App() {
               <Route path="/course/:courseId">
                 <Course />
               </Route>
-            </Switch>
+            </Switch> */}
           </Applayout>
-        </Route> */}
+        </Route>
       </Switch>
     </BrowserRouter>
   );
