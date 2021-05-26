@@ -76,5 +76,58 @@
         .hrFooter {
             border-top: 1px solid #4a4a4a;
         }
+
+        .imgFooter {
+            padding: 0;
+            text-align: center;
+            .vngIcon {
+                width: 80px;
+            }
+            .imgBoCo {
+                padding: 10px;
+                width: 130px;
+            }
+        }
+        
+
+
+        .infoFooter {
+            color: #fff;
+            white-space: nowrap;
+            font-size: 70%;
+            span {
+                display: block;
+                line-height: 1.8;
+                color: #949494;
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
     }
 }
+
+@import "./variable.scss";
+@import "./mixin.scss";
+
+@include responesive("large") {
+    #footer {
+        .myFooter {
+            .imgFooter {
+                .vngIcon {
+                    // display: block; 
+                    margin: auto;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .infoFooter {
+                span {
+                    text-align: center;
+                    white-space: inherit;
+                }
+            }
+        }
+    }
+}
+
+

@@ -16,12 +16,14 @@ import PAYOO from "../../img/payoo.jpg";
 import VIETCOMBANK from "../../img/VCB.png";
 import FACEBOOK from "../../img/facebook-logo.png";
 import ZALO from "../../img/zalo-logo.png";
+import ZION from "../../img/zion-logo.jpg";
+import BCT from "../../img/bocongthuong.png";
 
 export default function Footer() {
   return (
     <div id="footer" className="col-xs-12">
       <div className="myFooter">
-        <div className="row">
+        <div className="row footer_top">
           <div className="col-md-4 col-xs-12">
             <p className="title title-about">CyberPhim</p>
             <div className="col-md-12">
@@ -132,7 +134,7 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div className="col-x6-6 text-center social">
+            {/* <div className="col-x6-6 text-center social">
               <p className="title">Ứng dụng</p>
               <a
                 target="_blank"
@@ -148,11 +150,52 @@ export default function Footer() {
               >
                 <img className="iconApp" src={ZALO} />
               </a>
+            </div> */}
+          </div>
+        </div>
+        <hr className="hrFooter" />
+        <div className="footer_bottom">
+          <div className="row">
+            <div className="col-md-1 col-xs-12 imgFooter">
+              <img className="vngIcon" src={ZION} style={{ borderRadius: 8 }} />
+            </div>
+            <div className="col-md-9 col-xs-12 infoFooter">
+              <span>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</span>
+              <span>
+                Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ
+                Chí Minh, Việt Nam.
+              </span>
+              <span>
+                Giấy chứng nhận đăng ký kinh doanh số: 0101659783,
+                <br />
+                đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế
+                hoạch và đầu tư Thành phố Hồ Chí Minh cấp.
+              </span>
+              <span>
+                Số Điện Thoại (Hotline): 1900&nbsp;545&nbsp;436
+                <br />
+                Email:{" "}
+                <a
+                  href="mailto:khangvippro357@gmail.com"
+                  style={{ color: "#FB4226" }}
+                >
+                  khangvippro357@gmail.com
+                </a>
+              </span>
+              <span>
+                * Đây là sản phẩm của Định Ngô và Đình Khang với mục đích học
+                tập
+              </span>
+            </div>
+            <div className="col-md-2 col-xs-12 imgFooter">
+              <a
+                target="_blank"
+                href="http://online.gov.vn/Home/WebDetails/62782"
+              >
+                <img className="imgBoCo" alt="Bộ Công Thương" title src={BCT} />
+              </a>
             </div>
           </div>
-
-          <hr className="hrFooter" />
-          <div className="row"></div>
         </div>
       </div>
     </div>
