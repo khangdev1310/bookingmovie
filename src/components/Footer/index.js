@@ -134,9 +134,10 @@ export default function Footer() {
               <p className="title">Ứng dụng</p>
             </div>
           </div>
+
+          <hr className="hrFooter" />
+          <div className="row"></div>
         </div>
-        <hr className="hrFooter" />
-        <div className="row"></div>
       </div>
     </div>
   );

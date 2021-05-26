@@ -1,7 +1,13 @@
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+<<<<<<< HEAD
 import Adminlayout from "./layouts/Adminlayout";
 import "./styles";
 import Footer from "./components/Footer/index";
+=======
+import Adminlayout from './layouts/Adminlayout';
+import Applayout from "./layouts/Applayout";
+import './styles';
+>>>>>>> 6f94f8a1a4668a91f80890795f2e22be62ed4d20
 
 function App() {
   return (
@@ -20,6 +26,7 @@ function App() {
                   <AdminUsers />
                 </Route>
               </Switch> */}
+<<<<<<< HEAD
           </Adminlayout>
         </Route>
         <Route path="/">
@@ -27,10 +34,16 @@ function App() {
         </Route>
         {/* Route Main */}
         {/* <Route path="/">
+=======
+            </Adminlayout>
+          </Route>
+          {/* Route Main */}
+        <Route path="/">
+>>>>>>> 6f94f8a1a4668a91f80890795f2e22be62ed4d20
          
           
           <Applayout >
-            <Switch>
+            {/* <Switch>
               <Route path="/" exact>
                 <Home />
               </Route>
@@ -40,9 +53,9 @@ function App() {
               <Route path="/course/:courseId">
                 <Course />
               </Route>
-            </Switch>
+            </Switch> */}
           </Applayout>
-        </Route> */}
+        </Route>
       </Switch>
     </BrowserRouter>
   );
