@@ -92,10 +92,7 @@
     }
 }
 
-@import "./variable.scss";
-@import "./mixin.scss";
-
-@include responesive("large") {
+@include responsive("large") {
     #footer {
         .myFooter {
             .imgFooter {
