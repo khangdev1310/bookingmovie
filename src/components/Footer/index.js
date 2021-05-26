@@ -114,23 +114,25 @@ export default function Footer() {
           <div className="col-md-4 col-xs-12">
             <div className="col-xs-6 support">
               <p className="title">Hỗ trợ khách hàng</p>
-              <div style={{padding: "0 15px"}}>
-                  <a ui-sref="faqMobile.faq" href="/webview/faq.html">
-                    FAQ
-                  </a>
-                  <a ui-sref="faqMobile.regular" href="/webview/regular.html">
-                    Thỏa thuận sử dụng
-                  </a>
-                  {/* <a ui-sref="">Quy chế hoạt động</a> */}
-                  <a ui-sref="faqMobile.policy" href="/webview/policy.html">
-                    Chính sách bảo mật
-                  </a>
-                  <a ui-sref="guildline.guidev2" href="/brand-guideline/">
-                    Brand Guidelines
-                  </a>
+              <div style={{ padding: "0 15px" }}>
+                <a ui-sref="faqMobile.faq" href="#">
+                  FAQ
+                </a>
+                <a ui-sref="faqMobile.regular" href="#">
+                  Thỏa thuận sử dụng
+                </a>
+                {/* <a ui-sref="">Quy chế hoạt động</a> */}
+                <a ui-sref="faqMobile.policy" href="#">
+                  Chính sách bảo mật
+                </a>
+                <a ui-sref="guildline.guidev2" href="#">
+                  Brand Guidelines
+                </a>
               </div>
             </div>
-            <div className="col-xs-6"></div>
+            <div className="col-md-6">
+              <p className="title">Ứng dụng</p>
+            </div>
           </div>
         </div>
         <hr className="hrFooter" />
