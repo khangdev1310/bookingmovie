@@ -1,0 +1,14 @@
+@mixin responsive($screen) {
+    //lấy giá trị dựa vào tên màn hình
+    //kiểm tra giá tên màn hình có hợp lệ không => kiểm tra tên có tồn tại trong biến $breakpoints
+    @if(map-has-key($map: $breakpoints, $key: $screen )){
+        //hợp lệ
+        //$value chứa kích thước màn hình lấy được
+        $value: map-get($map: $breakpoints , $key: $screen );
+        @media screen and (max-width:$value){
+            @content;
+        }
+    }@else{
+        @warn "Màn hình không tồn tại";
+    }
+}

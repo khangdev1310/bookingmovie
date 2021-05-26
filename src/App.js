@@ -25,9 +25,7 @@ function App() {
           </Adminlayout>
         </Route>
         
-        <Route path="/">
-          <Footer />
-        </Route>
+        
         {/* Route Main */}
         {/* <Route path="/">
             </Adminlayout>
