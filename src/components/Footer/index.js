@@ -14,6 +14,8 @@ import STARLIGHT from "../../img/STARLIGHT.png";
 import ZALOPAY from "../../img/zalopay_icon.png";
 import PAYOO from "../../img/payoo.jpg";
 import VIETCOMBANK from "../../img/VCB.png";
+import FACEBOOK from "../../img/facebook-logo.png";
+import ZALO from "../../img/zalo-logo.png";
 
 export default function Footer() {
   return (
@@ -111,7 +113,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div className="col-md-4 col-xs-12">
+          <div className="row col-md-4 col-xs-12">
             <div className="col-xs-6 support">
               <p className="title">Hỗ trợ khách hàng</p>
               <div style={{ padding: "0 15px" }}>
@@ -130,8 +132,22 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-x6-6 text-center social">
               <p className="title">Ứng dụng</p>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/tix.vn/"
+                title="Facebook social"
+              >
+                <img className="iconApp" src={FACEBOOK} />
+              </a>
+              <a
+                target="_blank"
+                href="https://zalo.me/tixdatve"
+                title="Zalo social"
+              >
+                <img className="iconApp" src={ZALO} />
+              </a>
             </div>
           </div>
 
