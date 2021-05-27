@@ -1,4 +1,3 @@
-
 .header {
     width: 100%;
     height: 60px;
@@ -6,6 +5,7 @@
     box-shadow: 0 0 15px #0000004d;
     z-index: 9;
     transition: all 0.2s;
+    position: relative;
     .header__container {
         padding: 0px 15px;
         display: flex;
@@ -32,7 +32,7 @@
                 color: #000;
                 transition: all 0.2s;
                 margin-right: 20px;
-                &:hover{
+                &:hover {
                     color: #fb4226;
                 }
             }
@@ -54,25 +54,61 @@
                         margin-top: 0;
                         margin-bottom: 0;
                         font-size: 14px;
-                        color:#9b9b9b;
-                        
-                        
+                        color: #9b9b9b;
                     }
+                }
+            }
+        }
+        .nav__buger__menu {
+            display: none;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 15px;
+            // .buger_btn {
+            //     width: 35px;
+            //     height: 30px;
+            //     display: flex;
+            //     flex-direction: column;
+            //     justify-content: space-around;
+            //     .line {
+            //         width: 100%;
+            //         height: 2px;
+            //         background-color: #000;
+            //         border-radius: 10px;
+            //         transition: all 0.2s;
+            //     }
+            //     &.change .line1 {
+            //         transform: rotateZ(-45deg) translate(-8px, 6px);
+            //     }
+            //     &.change .line2 {
+            //         opacity: 0;
+            //     }
+            //     &.change .line3 {
+            //         transform: rotateZ(45deg) translate(-8px, -6px);
+            //     }
+            // }
+            .nav-mobile-text{
+                color: #000;
+                text-decoration: none;
+                &:hover{
+                    color: #fb4226;
                 }
             }
         }
     }
 }
 
-
-@include responsive("medium"){
-    .header{
-        .header__container{
-            .header__menu{
-                display:none;
+@include responsive("medium") {
+    .header {
+        .header__container {
+            .header__menu {
+                display: none;
             }
-            .header__login{
-                display:none;
+            .header__login {
+                display: none;
+            }
+            .nav__buger__menu {
+                display: block;
             }
         }
     }

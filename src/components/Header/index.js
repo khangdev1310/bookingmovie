@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Burger from './burger';
 
 export default function Header() {
+
+    
     return (
         <div className="header">
             <div className="header__container">
@@ -23,6 +26,10 @@ export default function Header() {
                             <p className="login-text">Đăng nhập</p>
                         </a>
                     </div>
+                </div>
+                <div className="nav__buger__menu">
+                    <Burger/>
+                    
                 </div>
             </div>
             
