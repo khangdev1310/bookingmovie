@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import LoginUser from "./loginUser";
 const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
   margin-bottom: 0px;
+  div{
+      display: none;
+  }
   li {
     text-align: center;
     
@@ -26,6 +30,9 @@ const Ul = styled.ul`
     height: 100%;
     box-shadow: 0 0 1px #0000004d;
     overflow: hidden;
+    div{
+        display:block;
+    }
     li{
         padding: 18px 10px;
         border-bottom: 1px solid;
@@ -37,7 +44,9 @@ const Ul = styled.ul`
 export default function NavRight({ open }) {
   return (
     <>
+        
       <Ul open={open}>
+      <LoginUser/>
         <li className="nav-mobile-menu">
           <a className="nav-mobile-text">Trang Chủ</a>
         </li>

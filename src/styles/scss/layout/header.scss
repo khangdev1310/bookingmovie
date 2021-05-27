@@ -25,7 +25,7 @@
             display: flex;
             justify-content: center;
             text-align: center;
-            li{
+            li {
                 margin-right: 20px;
                 a {
                     text-decoration: none;
@@ -33,13 +33,12 @@
                     line-height: 60px;
                     color: #000;
                     transition: all 0.2s;
-                    
+
                     &:hover {
                         color: #fb4226;
                     }
                 }
             }
-            
         }
         .header__login {
             .account {
@@ -91,10 +90,10 @@
             //         transform: rotateZ(45deg) translate(-8px, -6px);
             //     }
             // }
-            .nav-mobile-text{
+            .nav-mobile-text {
                 color: #000;
                 text-decoration: none;
-                &:hover{
+                &:hover {
                     color: #fb4226;
                 }
             }
@@ -113,6 +112,26 @@
             }
             .nav__buger__menu {
                 display: block;
+            }
+            .account {
+                .account_user {
+                    display: flex;
+                    text-decoration: none;
+                    justify-content: left;
+                    align-items: center;
+                    margin-left: 10px;
+                    .btn-login {
+                        width: 30px;
+                        border-radius: 25px;
+                        margin-right: 10px;
+                    }
+                    .login-text {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        font-size: 15px;
+                        color: #9b9b9b;
+                    }
+                }
             }
         }
     }
