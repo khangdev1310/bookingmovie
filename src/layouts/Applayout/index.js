@@ -7,6 +7,6 @@ export default function Applayout({children}) {
     return <>
             <Header/>
             {children}
-            <Footer/>
+            {/* <Footer/> */}
         </>
 }
