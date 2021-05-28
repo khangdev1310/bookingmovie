@@ -87,28 +87,7 @@
   text-align: center;
 }
 
-#footer .myFooter .imgFooter .vngIcon {
-  width: 80px;
-}
 
-#footer .myFooter .imgFooter .imgBoCo {
-  padding: 10px;
-  width: 130px;
-}
-
-#footer .myFooter .infoFooter {
-  color: #fff;
-  white-space: nowrap;
-  font-size: 70%;
-}
-
-#footer .myFooter .infoFooter span {
-  display: block;
-  line-height: 1.8;
-  color: #949494;
-  font-size: 12px;
-  font-weight: 400;
-}
 
 @media screen and (max-width: 992px) {
   #footer .myFooter .imgFooter .vngIcon {

@@ -1,9 +1,9 @@
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Adminlayout from "./layouts/Adminlayout";
+import './css/index.css'
 import "./styles";
 import Footer from "./components/Footer/index";
 import Applayout from "./layouts/Applayout";
-import './styles';
 
 function App() {
   return (

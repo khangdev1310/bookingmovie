@@ -14,19 +14,16 @@ import STARLIGHT from "../../img/STARLIGHT.png";
 import ZALOPAY from "../../img/zalopay_icon.png";
 import PAYOO from "../../img/payoo.jpg";
 import VIETCOMBANK from "../../img/VCB.png";
-import FACEBOOK from "../../img/facebook-logo.png";
-import ZALO from "../../img/zalo-logo.png";
-import ZION from "../../img/zion-logo.jpg";
-import BCT from "../../img/bocongthuong.png";
+import LOGO  from "../../img/logo-comcast.jpg"
 
 export default function Footer() {
   return (
     <div id="footer" className="col-xs-12">
       <div className="myFooter">
         <div className="row footer_top">
-          <div className="col-md-4 col-xs-12">
+          <div className="col-md-4 col-xs-12 col-sm-6">
             <p className="title title-about">CyberPhim</p>
-            <div className="col-md-12">
+            <div className="col-md-12 intro-film">
               <p>
                 TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION Địa chỉ: Z06 Đường số
                 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt Nam.
@@ -37,7 +34,7 @@ export default function Footer() {
               </p>
             </div>
           </div>
-          <div className="col-md-4 col-xs-12">
+          <div className="col-md-4 col-xs-12 col-sm-6 cooperation">
             <p className="title">Đối tác</p>
             <div className="row col-sm-12 col-xs-12 linePartner">
               <a target="_blank" href="https://www.cgv.vn/" title="CGV">
@@ -115,10 +112,10 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div className="row col-md-4 col-xs-12">
+          <div className="row col-md-4 col-xs-12 FAQ">
             <div className="col-xs-6 support">
               <p className="title">Hỗ trợ khách hàng</p>
-              <div style={{ padding: "0 15px" }}>
+              <div style={{ padding: "0 15px" }} className="FAQ-mobile">
                 <a ui-sref="faqMobile.faq" href="#">
                   FAQ
                 </a>
@@ -155,47 +152,8 @@ export default function Footer() {
         </div>
         <hr className="hrFooter" />
         <div className="footer_bottom">
-          <div className="row">
-            <div className="col-md-1 col-xs-12 imgFooter">
-              <img className="vngIcon" src={ZION} style={{ borderRadius: 8 }} />
-            </div>
-            <div className="col-md-9 col-xs-12 infoFooter">
-              <span>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</span>
-              <span>
-                Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ
-                Chí Minh, Việt Nam.
-              </span>
-              <span>
-                Giấy chứng nhận đăng ký kinh doanh số: 0101659783,
-                <br />
-                đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế
-                hoạch và đầu tư Thành phố Hồ Chí Minh cấp.
-              </span>
-              <span>
-                Số Điện Thoại (Hotline): 1900&nbsp;545&nbsp;436
-                <br />
-                Email:{" "}
-                <a
-                  href="mailto:khangvippro357@gmail.com"
-                  style={{ color: "#FB4226" }}
-                >
-                  khangvippro357@gmail.com
-                </a>
-              </span>
-              <span>
-                * Đây là sản phẩm của Định Ngô và Đình Khang với mục đích học
-                tập
-              </span>
-            </div>
-            <div className="col-md-2 col-xs-12 imgFooter">
-              <a
-                target="_blank"
-                href="http://online.gov.vn/Home/WebDetails/62782"
-              >
-                <img className="imgBoCo" alt="Bộ Công Thương" title src={BCT} />
-              </a>
-            </div>
-          </div>
+          <img className="hangphim" src={LOGO} alt="Ảnh logo footer" />
+          <p className="text-footer">Công ty CyberPhim <span style={{color: "red"}}>*Đây là sản phẩm do Định Ngô và Đình Khang</span> sử dụng cho việc học tập</p>
         </div>
       </div>
     </div>

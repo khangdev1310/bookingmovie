@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+p, span {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 15px #0000004d;
+  z-index: 9;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.header .header__container {
+  padding: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .header__container .header__logo {
+  align-items: center;
+  justify-content: center;
+}
+
+.header .header__container .header__logo a {
+  text-decoration: none;
+  line-height: 50px;
+}
+
+.header .header__container .header__logo a img {
+  width: 50px;
+}
+
+.header .header__container .header__menu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.header .header__container .header__menu li {
+  margin-right: 20px;
+}
+
+.header .header__container .header__menu li a {
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
+  color: #000;
+  transition: all 0.2s;
+}
+
+.header .header__container .header__menu li a:hover {
+  color: #fb4226;
+}
+
+.header .header__container .header__login .account .account_user {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  line-height: 55px;
+}
+
+.header .header__container .header__login .account .account_user .btn-login {
+  width: 30px;
+  border-radius: 25px;
+  margin-right: 5px;
+}
+
+.header .header__container .header__login .account .account_user .login-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #9b9b9b;
+}
+
+.header .header__container .nav__buger__menu {
+  display: none;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.header .header__container .nav__buger__menu .nav-mobile-text {
+  color: #000;
+  text-decoration: none;
+}
+
+.header .header__container .nav__buger__menu .nav-mobile-text:hover {
+  color: #fb4226;
+}
+
+@media screen and (max-width: 768px) {
+  .header .header__container .header__menu {
+    display: none;
+  }
+  .header .header__container .header__login {
+    display: none;
+  }
+  .header .header__container .nav__buger__menu {
+    display: block;
+  }
+  .header .header__container .account .account_user {
+    display: flex;
+    text-decoration: none;
+    justify-content: left;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .header .header__container .account .account_user .btn-login {
+    width: 30px;
+    border-radius: 25px;
+    margin-right: 10px;
+  }
+  .header .header__container .account .account_user .login-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    color: #9b9b9b;
+  }
+}
+
+#footer {
+  background-color: #222;
+  padding: 20px 0;
+  color: #949494;
+}
+
+#footer p {
+  margin: 0;
+  padding: 0;
+}
+
+#footer col {
+  padding: 0;
+  margin: 0;
+}
+
+#footer .myFooter {
+  max-width: 940px;
+  float: none;
+  margin: auto;
+  clear: both;
+}
+
+#footer .myFooter .row div > .title {
+  font-size: 100%;
+  padding: 0 15px 20px 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#footer .myFooter .row div > .title.title-about {
+  font-size: 40px;
+  color: orange;
+}
+
+#footer .myFooter .linePartner {
+  margin-bottom: 15px;
+  padding: 0 20px;
+  flex-wrap: nowrap;
+}
+
+#footer .myFooter .linePartner a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#footer .myFooter .linePartner a .iconConnect {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+  transition: all 0.25s;
+}
+
+#footer .myFooter .linePartner a .iconConnect:hover {
+  opacity: 0.7;
+}
+
+#footer .myFooter .support a {
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 16px;
+  color: #949494;
+  display: block;
+  transition: all 0.2s;
+  line-height: 2.3;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+#footer .myFooter .support a:hover {
+  color: #fff;
+}
+
+#footer .myFooter .hrFooter {
+  border-top: 1px solid #4a4a4a;
+}
+
+#footer .myFooter .footer_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer .myFooter .footer_bottom .hangphim {
+  width: 80px;
+  height: 80px;
+}
+
+#footer .myFooter .footer_bottom p {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  #footer .myFooter .footer_top div > p.title-about {
+    font-size: 30px !important;
+  }
+  #footer .myFooter .footer_top .intro-film {
+    font-size: 90%;
+  }
+  #footer .myFooter .footer_top .cooperation {
+    font-size: 80%;
+  }
+  #footer .myFooter .footer_top .row div > .title {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #footer .myFooter .footer_top .FAQ div {
+    padding: 10px 15px;
+  }
+  #footer .myFooter .footer_bottom img {
+    width: 50px;
+    height: 50px;
+  }
+  #footer .myFooter .footer_bottom p {
+    margin: 5px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #footer .myFooter .footer_top .cooperation {
+    display: none;
+  }
+  #footer .myFooter .footer_top .FAQ .FAQ-mobile {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #footer .myFooter .footer_top .FAQ .FAQ-mobile a {
+    padding: 0 5px;
+    max-width: 100%;
+    font-size: 80%;
+  }
+  #footer .myFooter .footer_bottom img {
+    width: 30px;
+    height: 30px;
+  }
+  #footer .myFooter .footer_bottom p {
+    margin: 5px;
+    font-size: small;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -2,6 +2,14 @@
     background-color: #222;
     padding: 20px 0;
     color: #949494;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    col {
+        padding: 0;
+        margin: 0;
+    }
     .myFooter {
         max-width: 940px;
         float: none;
@@ -9,7 +17,7 @@
         clear: both;
         .row {
             div > .title {
-                font-size: 80%;
+                font-size: 100%;
                 padding: 0 15px 20px 15px;
                 color: #fff;
                 text-transform: uppercase;
@@ -22,7 +30,8 @@
 
         .linePartner {
             margin-bottom: 15px;
-            padding: 0 15px;
+            padding: 0 20px;
+            flex-wrap: nowrap;
             a {
                 text-decoration: none;
                 color: #000;
@@ -43,18 +52,17 @@
 
         .support {
             a {
-                font-size: 12px !important;
-                font-size: 80%;
                 font-weight: 700;
                 white-space: nowrap;
+                font-size: 16px;
                 color: #949494;
                 display: block;
                 transition: all 0.2s;
                 line-height: 2.3;
                 text-decoration: none;
                 transition: all 0.5s;
-                &:hover{
-                    color: #fff
+                &:hover {
+                    color: #fff;
                 }
             }
         }
@@ -63,30 +71,16 @@
             border-top: 1px solid #4a4a4a;
         }
 
-        .imgFooter {
-            padding: 0;
-            text-align: center;
-            .vngIcon {
+        .footer_bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .hangphim {
                 width: 80px;
+                height: 80px;
             }
-            .imgBoCo {
-                padding: 10px;
-                width: 130px;
-            }
-        }
-        
-
-
-        .infoFooter {
-            color: #fff;
-            white-space: nowrap;
-            font-size: 70%;
-            span {
-                display: block;
-                line-height: 1.8;
-                color: #949494;
-                font-size: 12px;
-                font-weight: 400;
+            p {
+                margin-left: 10px;
             }
         }
     }
@@ -95,22 +89,79 @@
 @include responsive("large") {
     #footer {
         .myFooter {
-            .imgFooter {
-                .vngIcon {
-                    // display: block; 
-                    margin: auto;
-                    margin-bottom: 20px;
+            .footer_top {
+                div > p.title-about {
+                    font-size: 30px !important;
                 }
-            }
-
-            .infoFooter {
-                span {
-                    text-align: center;
-                    white-space: inherit;
+                .intro-film {
+                    font-size: 90%;
+                }
+                .cooperation {
+                    font-size: 80%;
+                }
+                .row div > .title {
+                    font-size: 80%;
                 }
             }
         }
     }
 }
 
+@include responsive("medium") {
+    #footer {
+        .myFooter {
+            .footer_top {
+                .FAQ {
+                    div {
+                        padding: 10px 15px;
+                    }
+                }
+            }
 
+            .footer_bottom {
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+                p {
+                    margin: 5px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@include responsive("small") {
+    #footer {
+        .myFooter {
+            .footer_top {
+                .cooperation {
+                    display: none;
+                }
+                .FAQ {
+                    .FAQ-mobile{
+                        display: flex;
+                        justify-content:space-between;
+                        flex-wrap: wrap;
+                        a{
+                            padding: 0 5px;
+                            max-width: 100%;
+                            font-size: 80%;
+                        }
+                    }
+                }
+            }
+            .footer_bottom {
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+                p {
+                    margin: 5px;
+                    font-size: small;
+                }
+            }
+        }
+    }
+}

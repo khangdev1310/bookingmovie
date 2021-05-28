@@ -5,8 +5,8 @@ import Footer from 'src/components/Footer';
 
 export default function Applayout({children}) {
     return <>
-            <Header/>
+            {/* <Header/> */}
             {children}
-            {/* <Footer/> */}
+            <Footer/>
         </>
 }
