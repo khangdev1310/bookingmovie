@@ -4,6 +4,7 @@ import './css/index.css'
 import "./styles";
 import Footer from "./components/Footer/index";
 import Applayout from "./layouts/Applayout";
+import Carousel from "./components/Carousel";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                   <AdminUsers />
                 </Route>
               </Switch> */}
+              
           </Adminlayout>
         </Route>
         
@@ -44,6 +46,7 @@ function App() {
                 <Course />
               </Route>
             </Switch> */}
+            <Carousel/>
           </Applayout>
         </Route>
       </Switch>
