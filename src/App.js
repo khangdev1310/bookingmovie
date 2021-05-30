@@ -5,6 +5,8 @@ import "./styles";
 import Footer from "./components/Footer/index";
 import Applayout from "./layouts/Applayout";
 import CarouselHeader from "./components/Carousel";
+import Video from "./components/Carousel/Video";
+
 
 function App() {
   return (
