@@ -4,7 +4,7 @@ import './css/index.css'
 import "./styles";
 import Footer from "./components/Footer/index";
 import Applayout from "./layouts/Applayout";
-import Carousel from "./components/Carousel";
+import CarouselHeader from "./components/Carousel";
 
 function App() {
   return (
@@ -46,7 +46,7 @@ function App() {
                 <Course />
               </Route>
             </Switch> */}
-            <Carousel/>
+            <CarouselHeader/>
           </Applayout>
         </Route>
       </Switch>

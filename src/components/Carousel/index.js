@@ -1,46 +1,71 @@
-import React from "react";
-import trangti from "../../img/trang-ti-16194117174325.jpg";
-import latmat from "../../img/lat-mat-48h-16177782153424.png";
-import bantay from "../../img/ban-tay-diet-quy-evil-expeller-16177781815781.png";
+import React, { useState } from 'react';
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption
+} from 'reactstrap';
 
-export default function Carousel() {
-  return (
-    <div className="movie-trailer">
-      <div
-        id="Carousel-movie-trailer"
-        className="carousel slide"
-        data-ride="carousel"
+const items = [
+  {
+    src: './images/footer/gaigia.jpg',
+  },
+  {
+    src: './images/footer/lat-mat-48h-16177782153424.png',
+  },
+  {
+    src: './images/footer/ban-tay-diet-quy-evil-expeller-16177781815781.png',
+  }
+];
+
+const CarouselHeader = (props) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  const next = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);
+  }
+
+  const previous = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    setActiveIndex(nextIndex);
+  }
+
+  const goToIndex = (newIndex) => {
+    if (animating) return;
+    setActiveIndex(newIndex);
+  }
+
+  const slides = items.map((item) => {
+    return (
+      <CarouselItem
+        onExiting={() => setAnimating(true)}
+        onExited={() => setAnimating(false)}
+        key={item.src}
       >
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={latmat} className="d-block w-100"  />
-          </div>
-          <div className="carousel-item">
-            <img src={trangti} className="d-block w-100"  />
-          </div>
-          <div className="carousel-item">
-            <img src={bantay} className="d-block w-100" />
-          </div>
+        <div className="banner-carousel">
+          <img src={item.src} alt={item.altText} />
         </div>
-        <a
-          className="carousel-control-prev"
-          href="#Carousel-movie-trailer"
-          role="button"
-          data-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="sr-only">Previous</span>
-        </a>
-        <a
-          className="carousel-control-next"
-          href="#Carousel-movie-trailer"
-          role="button"
-          data-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
+      </CarouselItem>
+    );
+  });
+
+  return (
+    <Carousel
+      activeIndex={activeIndex}
+      next={next}
+      previous={previous}
+    >
+      <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+      {slides}
+      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+    </Carousel>
   );
 }
+
+export default CarouselHeader;

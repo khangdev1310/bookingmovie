@@ -1,20 +1,20 @@
 import React from "react";
-import CGV from "../../img/cgv.png";
-import BHD from "../../img/bhd.png";
-import GALAXY from "../../img/galaxycine.png";
-import CINESTA from "../../img/cinestar.png";
-import MEGA from "../../img/megags.png";
-import BT from "../../img/bt.jpg";
-import LOTE from "../../img/404b8c4b80d77732e7426cdb7e24be20.png";
-import DCINE from "../../img/dcine.png";
-import DONGDAC from "../../img/dongdacinema.png";
-import TOUCH from "../../img/TOUCH.png";
-import CNX from "../../img/cnx.jpg";
-import STARLIGHT from "../../img/STARLIGHT.png";
-import ZALOPAY from "../../img/zalopay_icon.png";
-import PAYOO from "../../img/payoo.jpg";
-import VIETCOMBANK from "../../img/VCB.png";
-import LOGO  from "../../img/logo-comcast.jpg"
+// import CGV from "./images/footer/cgv.png";
+// import BHD from "./images/footer/bhd.png";
+// import GALAXY from "./images/footer/galaxycine.png";
+// import CINESTA from "./images/footer/cinestar.png";
+// import MEGA from "./images/footer/megags.png";
+// import BT from "./images/footer/bt.jpg";
+// // import LOTE from "./images/footer/404b8c4b80d77732e7426cdb7e24be20.png";
+// import DCINE from "./images/footer/dcine.png";
+// import DONGDAC from "./images/footer/dongdacinema.png";
+// import TOUCH from "./images/footer/TOUCH.png";
+// import CNX from "./images/footer/cnx.jpg";
+// import STARLIGHT from "./images/footer/STARLIGHT.png";
+// import ZALOPAY from "./images/footer/zalopay_icon.png";
+// import PAYOO from "./images/footer/payoo.jpg";
+// import VIETCOMBANK from "./images/footer/VCB.png";
+// import LOGO  from "./images/footer/logo-comcast.jpg"
 
 export default function Footer() {
   return (
@@ -40,25 +40,25 @@ export default function Footer() {
               <a target="_blank" href="https://www.cgv.vn/" title="CGV">
                 <img
                   className="iconConnect"
-                  src={CGV}
+                  src='./images/footer/cgv.png'
                   style={{ backgroundColor: "#fff" }}
                 />
               </a>
               <a target="_blank" href="http://bhdstar.vn" title="BHD">
-                <img className="iconConnect" src={BHD} />
+                <img className="iconConnect" src='./images/footer/bhd.png' />
               </a>
               <a target="_blank" href="http://galaxycine.vn" title="Galaxy">
-                <img className="iconConnect" src={GALAXY} />
+                <img className="iconConnect" src='./images/footer/galaxycine.png' />
               </a>
               <a target="_blank" href="http://cinestar.com.vn" title="Cinestar">
-                <img className="iconConnect" src={CINESTA} />
+                <img className="iconConnect" src='./images/footer/cinestar.png' />
               </a>
               <a
                 target="_blank"
                 href="http://lottecinemavn.com"
                 title="Lotte Cinema"
               >
-                <img className="iconConnect" src={LOTE} />
+                <img className="iconConnect" src='./images/footer/404b8c4b80d77732e7426cdb7e24be20.png' />
               </a>
             </div>
             <div className="row col-sm-12 col-xs-12 linePartner">
@@ -67,48 +67,48 @@ export default function Footer() {
                 href="https://www.megagscinemas.vn"
                 title="MegaGS"
               >
-                <img className="iconConnect" src={MEGA} />
+                <img className="iconConnect" src='./images/footer/megags.png' />
               </a>
               <a
                 target="_blank"
                 href="https://www.betacineplex.vn/"
                 title="Beta"
               >
-                <img className="iconConnect" src={BT} />
+                <img className="iconConnect" src='./images/footer/bt.jpg' />
               </a>
               <a target="_blank" href="http://ddcinema.vn" title="DDC">
-                <img className="iconConnect" src={DONGDAC} />
+                <img className="iconConnect" src='./images/footer/dongdacinema.png' />
               </a>
               <a
                 target="_blank"
                 href="https://touchcinema.com/"
                 title="Touch Cinema"
               >
-                <img className="iconConnect" src={TOUCH} />
+                <img className="iconConnect" src='./images/footer/TOUCH.png' />
               </a>
               <a target="_blank" href="https://cinemaxvn.com/" title="Cinemax">
-                <img className="iconConnect" src={CNX} />
+                <img className="iconConnect" src='./images/footer/cnx.jpg' />
               </a>
             </div>
             <div className="row col-sm-12 col-xs-12 linePartner">
               <a target="_blank" href="http://starlight.vn/" title="Starlight">
-                <img className="iconConnect" src={STARLIGHT} />
+                <img className="iconConnect" src='./images/footer/STARLIGHT.png' />
               </a>
               <a target="_blank" href="https://www.dcine.vn/" title="Dcine">
-                <img className="iconConnect" src={DCINE} />
+                <img className="iconConnect" src='./images/footer/dcine.png' />
               </a>
               <a target="_blank" href="https://zalopay.vn/" title="ZaloPay">
-                <img className="iconConnect" src={ZALOPAY} />
+                <img className="iconConnect" src='./images/footer/zalopay_icon.png' />
               </a>
               <a target="_blank" href="https://www.payoo.vn/" title="Payoo">
-                <img className="iconConnect" src={PAYOO} />
+                <img className="iconConnect" src='./images/footer/payoo.jpg' />
               </a>
               <a
                 target="_blank"
                 href="https://www.vietcombank.com.vn/"
                 title="Vietcombank"
               >
-                <img className="iconConnect" src={VIETCOMBANK} />
+                <img className="iconConnect" src='./images/footer/VCB.png' />
               </a>
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function Footer() {
         </div>
         <hr className="hrFooter" />
         <div className="footer_bottom">
-          <img className="hangphim" src={LOGO} alt="Ảnh logo footer" />
+          <img className="hangphim" src='./images/footer/logo-comcast.jpg' alt="Ảnh logo footer" />
           <p className="text-footer">Công ty CyberPhim <span style={{color: "red"}}>*Đây là sản phẩm do Định Ngô và Đình Khang</span> sử dụng cho việc học tập</p>
         </div>
       </div>

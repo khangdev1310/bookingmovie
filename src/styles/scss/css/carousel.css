@@ -1,0 +1,34 @@
+.carousel.slide {
+  height: 100%;
+}
+
+.carousel.slide .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel.slide .carousel-inner .carousel-item {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel.slide .carousel-inner .carousel-item .banner-carousel {
+  height: 100%;
+}
+
+.carousel.slide .carousel-inner .carousel-item .banner-carousel img {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+.carousel.slide .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.carousel.slide .carousel-indicators li.active {
+  background-color: #fb4226;
+}
+/*# sourceMappingURL=carousel.css.map */
