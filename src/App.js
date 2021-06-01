@@ -1,12 +1,12 @@
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Adminlayout from "./layouts/Adminlayout";
-import './css/index.css'
+import "./css/index.css";
 import "./styles";
-import Footer from "./components/Footer/index";
+
 import Applayout from "./layouts/Applayout";
 import CarouselHeader from "./components/Carousel";
-import Video from "./components/Carousel/Video";
 
+import DangNhap from "./components/LoginUser/dangNhap";
 
 function App() {
   return (
@@ -25,18 +25,14 @@ function App() {
                   <AdminUsers />
                 </Route>
               </Switch> */}
-              
           </Adminlayout>
         </Route>
-        
-        
-        {/* Route Main */}
-        {/* <Route path="/">
-            </Adminlayout>
-          </Route>
-          {/* Route Main */}
+
+        <Route path="/dangnhap">
+          <DangNhap />
+        </Route>
         <Route path="/">
-          <Applayout >
+          <Applayout>
             {/* <Switch>
               <Route path="/" exact>
                 <Home />
@@ -48,7 +44,7 @@ function App() {
                 <Course />
               </Route>
             </Switch> */}
-            <CarouselHeader/>
+            <CarouselHeader />
           </Applayout>
         </Route>
       </Switch>
