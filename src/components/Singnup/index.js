@@ -12,7 +12,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 function Copyright() {
     return (
@@ -49,6 +50,42 @@ function Copyright() {
 
 export default function DangKy() {
     const classes = useStyles();
+    const formik = useFormik({
+        initialValues: {
+          taiKhoan: "",
+          matKhau: "",
+          hoTen: "",
+          email: "",
+          soDt: "",
+          maLoaiNguoiDung: "KhachHang",
+        //   maNhom: MA_NHOM,
+        },
+        validationSchema: Yup.object({
+          taiKhoan: Yup.string("Invalid account format").required(
+            "Vui lòng điền vào!"
+          ),
+          matKhau: Yup.string()
+            .min(8, "Minimum 8 characters")
+            .required("Vui lòng điền vào!"),
+          hoTen: Yup.string("Invalid account format").required(
+            "Vui lòng điền vào!"
+          ),
+          email: Yup.string()
+            .email("Email không tồn tại")
+            .required("Vui lòng điền vào!"),
+          soDt: Yup.number()
+            .typeError("Số điện thoại không hợp lệ")
+            .positive("Số điện thoại không hợp lệ")
+            .required("Vui lòng điền vào!"),
+        }),
+        onSubmit: (values) => {
+        //   dispatch({
+        //     type: POST_THONG_TIN_DANG_KI_REQUESTS_SAGA,
+        //     payload: values,
+        //   });
+        console.log(values);
+        },
+      });
     return (
         <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -59,31 +96,61 @@ export default function DangKy() {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={formik.handleSubmit}>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} >
               <TextField
-                autoComplete="fname"
-                name="firstName"
+                autoComplete="account"
+                name="taiKhoan"
                 variant="outlined"
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
+                label="Tên tài khoản"
                 autoFocus
+                onChange={formik.handleChange}
+                value={formik.values.taiKhoan}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            {formik.touched.taiKhoan && formik.errors.taiKhoan ? (
+                <div>{formik.errors.taiKhoan}</div>
+              ) : null}
+
+            
+            
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="matKhau"
+                label="Mật khẩu"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+                onChange={formik.handleChange}
+                value={formik.values.matkhau}
+              />
+            </Grid>
+            {formik.touched.matKhau && formik.errors.matKhau ? (
+                <div>{formik.errors.matKhau}</div>
+              ) : null}
+            <Grid item xs={12} >
               <TextField
                 variant="outlined"
                 required
                 fullWidth
                 id="lastName"
-                label="Last Name"
-                name="lastName"
+                label="Họ & Tên"
+                name="hoTen"
                 autoComplete="lname"
+                onChange={formik.handleChange}
+                value={formik.values.hoTen}
               />
             </Grid>
+            {formik.touched.matKhau && formik.errors.matKhau ? (
+                <div>{formik.errors.matKhau}</div>
+              ) : null}
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
@@ -93,20 +160,31 @@ export default function DangKy() {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+                onChange={formik.handleChange}
+                value={formik.values.email}
               />
             </Grid>
+            {formik.touched.email && formik.errors.email ? (
+                <div>{formik.errors.email}</div>
+              ) : null}
+
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
                 required
                 fullWidth
-                name="password"
-                label="Password"
+                name="soDt"
+                label="Số điện thoại "
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={formik.handleChange}
+                value={formik.values.soDt}
               />
             </Grid>
+            {formik.touched.soDt && formik.errors.soDt ? (
+                <div>{formik.errors.soDt}</div>
+              ) : null}
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}

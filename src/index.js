@@ -11,7 +11,7 @@ import {Provider} from 'react-redux'
 //Set up redux-thunk và thư viên applyMiddlewware
 
 import thunk from 'redux-thunk';
-import rootReducer from './reducers/rootReducer';
+import rootReducer from './redux/reducers/rootReducer';
 const middleware = applyMiddleware(thunk);
 const enhancer = compose(middleware,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 const store = createStore(rootReducer,enhancer)
