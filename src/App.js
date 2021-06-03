@@ -7,6 +7,7 @@ import Applayout from "./layouts/Applayout";
 import CarouselHeader from "./components/Carousel";
 
 import DangNhap from "./components/LoginUser/dangNhap";
+import DangKy from "./components/LoginUser/dangKy";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
 
         <Route path="/dangnhap">
           <DangNhap />
+        </Route>
+        <Route path="/dangky">
+          <DangKy/>
         </Route>
         <Route path="/">
           <Applayout>
