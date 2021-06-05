@@ -14,6 +14,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import {signup} from '../../redux/actionReducers/signUp';
+import { useDispatch, useSelector } from "react-redux";
 
 function Copyright() {
     return (
@@ -48,8 +50,10 @@ function Copyright() {
     },
   }));
 
-export default function DangKy() {
+export default  function DangKy() {
     const classes = useStyles();
+    const dispatch = useDispatch();
+    // const {data} =  await usersignAPI.signup();
     const formik = useFormik({
         initialValues: {
           taiKhoan: "",
@@ -58,7 +62,7 @@ export default function DangKy() {
           email: "",
           soDt: "",
           maLoaiNguoiDung: "KhachHang",
-        //   maNhom: MA_NHOM,
+          maNhom: "GP01",
         },
         validationSchema: Yup.object({
           taiKhoan: Yup.string("Invalid account format").required(
@@ -79,11 +83,8 @@ export default function DangKy() {
             .required("Vui lòng điền vào!"),
         }),
         onSubmit: (values) => {
-        //   dispatch({
-        //     type: POST_THONG_TIN_DANG_KI_REQUESTS_SAGA,
-        //     payload: values,
-        //   });
-        console.log(values);
+          dispatch(signup(values));
+          console.log(values);
         },
       });
     return (
@@ -113,7 +114,7 @@ export default function DangKy() {
               />
             </Grid>
             {formik.touched.taiKhoan && formik.errors.taiKhoan ? (
-                <div>{formik.errors.taiKhoan}</div>
+                <div className="alert alert-danger ml-2 w-100 mr-2">{formik.errors.taiKhoan}</div>
               ) : null}
 
             
@@ -133,7 +134,7 @@ export default function DangKy() {
               />
             </Grid>
             {formik.touched.matKhau && formik.errors.matKhau ? (
-                <div>{formik.errors.matKhau}</div>
+                <div className="alert alert-danger ml-2 w-100 mr-2">{formik.errors.matKhau}</div>
               ) : null}
             <Grid item xs={12} >
               <TextField
@@ -149,7 +150,7 @@ export default function DangKy() {
               />
             </Grid>
             {formik.touched.matKhau && formik.errors.matKhau ? (
-                <div>{formik.errors.matKhau}</div>
+                <div className="alert alert-danger ml-2 w-100 mr-2">{formik.errors.matKhau}</div>
               ) : null}
             <Grid item xs={12}>
               <TextField
@@ -165,7 +166,7 @@ export default function DangKy() {
               />
             </Grid>
             {formik.touched.email && formik.errors.email ? (
-                <div>{formik.errors.email}</div>
+                <div className="alert alert-danger ml-2 w-100 mr-2">{formik.errors.email}</div>
               ) : null}
 
             <Grid item xs={12}>
@@ -175,15 +176,15 @@ export default function DangKy() {
                 fullWidth
                 name="soDt"
                 label="Số điện thoại "
-                type="password"
+                
                 id="password"
-                autoComplete="current-password"
+                autoComplete="SDT"
                 onChange={formik.handleChange}
                 value={formik.values.soDt}
               />
             </Grid>
             {formik.touched.soDt && formik.errors.soDt ? (
-                <div>{formik.errors.soDt}</div>
+                <div className="alert alert-danger ml-2 w-100 mr-2">{formik.errors.soDt}</div>
               ) : null}
             <Grid item xs={12}>
               <FormControlLabel

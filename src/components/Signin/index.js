@@ -14,6 +14,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { signin } from "../../redux/actionReducers/userSign";
+import { useDispatch, useSelector } from "react-redux";
+import { Redirect, useLocation } from "react-router-dom";
+import qs from "qs";
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -49,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function DangNhap() {
   const classes = useStyles();
+  const { userInfo, isLoading, error } = useSelector((state) => state.userSign);
+  const dispatch = useDispatch();
+  const location = useLocation();
   const formik = useFormik({
     initialValues: {
       taiKhoan: "",
@@ -56,13 +63,26 @@ export default function DangNhap() {
     },
     validationSchema: Yup.object({
       taiKhoan: Yup.string("Invalid account format").required("Required!"),
-      matKhau: Yup.string().min(8, "Minimum 8 characters").required("Required!"),
+      matKhau: Yup.string()
+        .min(8, "Minimum 8 characters")
+        .required("Required!"),
     }),
     onSubmit: (values) => {
-      // postThongTinDangNhapAdminApiActionApi(values);
+      dispatch(signin(values));
       console.log(values);
     },
   });
+  if (userInfo) {
+    const { redirectTo } = qs.parse(location.search, {
+      ignoreQueryPrefix: true,
+    });
+
+    if (redirectTo) {
+      return <Redirect to={redirectTo} />;
+    }
+
+    return <Redirect to="/" />;
+  }
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -84,15 +104,14 @@ export default function DangNhap() {
             required
             fullWidth
             id="email"
-            label="Tài khoản"
+            label="Tên tài khoản"
             name="taiKhoan"
             autoComplete="account"
-            autoFocus
             onChange={formik.handleChange}
-            value={formik.errors.taiKhoan}
+            value={formik.values.taiKhoan}
           />
           {formik.touched.taiKhoan && formik.errors.taiKhoan ? (
-            <div>{formik.errors.taiKhoan}</div>
+            <div className="alert alert-danger  w-100 " >{formik.errors.taiKhoan}</div>
           ) : null}
           <TextField
             variant="outlined"
@@ -108,7 +127,7 @@ export default function DangNhap() {
             value={formik.values.matkhau}
           />
           {formik.touched.matKhau && formik.errors.matKhau ? (
-            <div>{formik.errors.matKhau}</div>
+            <div className="alert alert-danger  w-100 " >{formik.errors.matKhau}</div>
           ) : null}
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
