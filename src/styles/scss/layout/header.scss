@@ -42,17 +42,18 @@
         }
         .header__login {
             .account {
+                display: flex;
+                text-decoration: none;
+                justify-content: center;
+                align-items: center;
+                line-height: 55px;
+
+                .btn-login {
+                    width: 30px;
+                    border-radius: 25px;
+                    margin-right: 5px;
+                }
                 .account_user {
-                    display: flex;
-                    text-decoration: none;
-                    justify-content: center;
-                    align-items: center;
-                    line-height: 55px;
-                    .btn-login {
-                        width: 30px;
-                        border-radius: 25px;
-                        margin-right: 5px;
-                    }
                     .login-text {
                         margin-top: 0;
                         margin-bottom: 0;
@@ -114,17 +115,23 @@
                 display: block;
             }
             .account {
+                display: flex;
+                text-decoration: none;
+                justify-content: left;
+                align-items: center;
+                margin-left: 10px;
+                .btn-login {
+                    width: 30px;
+                    border-radius: 25px;
+                    margin-right: 10px;
+                }
                 .account_user {
                     display: flex;
                     text-decoration: none;
                     justify-content: left;
                     align-items: center;
                     margin-left: 10px;
-                    .btn-login {
-                        width: 30px;
-                        border-radius: 25px;
-                        margin-right: 10px;
-                    }
+
                     .login-text {
                         margin-top: 0;
                         margin-bottom: 0;

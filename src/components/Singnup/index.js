@@ -16,6 +16,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import {signup} from '../../redux/actionReducers/signUp';
 import { useDispatch, useSelector } from "react-redux";
+import { Redirect } from 'react-router';
 
 function Copyright() {
     return (
@@ -204,9 +205,9 @@ export default  function DangKy() {
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              <Link href="#" variant="body2">
+              {/* <Redirect to="/dangnhap" variant="body2">
                 Already have an account? Sign in
-              </Link>
+              </Redirect> */}
             </Grid>
           </Grid>
         </form>

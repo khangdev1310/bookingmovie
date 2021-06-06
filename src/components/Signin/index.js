@@ -16,7 +16,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { signin } from "../../redux/actionReducers/userSign";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect, useLocation } from "react-router-dom";
+import {  Redirect, useLocation } from "react-router-dom";
+
 import qs from "qs";
 function Copyright() {
   return (
@@ -149,9 +150,9 @@ export default function DangNhap() {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              {/* <Redirect to="/dangky" variant="body2">
                 {"Don't have an account? Sign Up"}
-              </Link>
+              </Redirect> */}
             </Grid>
           </Grid>
         </form>
