@@ -5,8 +5,8 @@ import "./styles";
 
 import Applayout from "./layouts/Applayout";
 import CarouselHeader from "./components/Carousel";
-import DangNhap from "./layouts/Signin";
-import DangKy from "./layouts/Singnup";
+import DangNhap from "./pages/Signin";
+import DangKy from "./pages/Singnup";
 
 
 
@@ -36,6 +36,7 @@ function App() {
         <Route path="/dangky">
           <DangKy/>
         </Route>
+        
         <Route path="/">
           <Applayout>
             {/* <Switch>
