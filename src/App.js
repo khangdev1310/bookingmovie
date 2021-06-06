@@ -5,8 +5,8 @@ import "./styles";
 
 import Applayout from "./layouts/Applayout";
 import CarouselHeader from "./components/Carousel";
-import DangNhap from "./components/Signin";
-import DangKy from "./components/Singnup";
+import DangNhap from "./layouts/Signin";
+import DangKy from "./layouts/Singnup";
 
 
 

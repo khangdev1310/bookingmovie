@@ -1,8 +1,15 @@
 
 import { SIGNUP_REQUEST, SIGNUP_SUCCESS, SIGNUP_FAILURE } from "../constanReducers/signUp";
 import usersignAPI from '../../services/usersAPI';
+import Swal from "sweetalert2";
 
-
+const handleNoti = (icon, title, text) => {
+  Swal.fire({
+    icon: `${icon}`,
+    title: `${title}`,
+    text: `${text}`,
+  });
+};
 export function signup(values) {
     return async (dispatch) => {
       dispatch({ type: SIGNUP_REQUEST });
@@ -13,11 +20,13 @@ export function signup(values) {
         localStorage.setItem("userInfo", JSON.stringify(data));
   
         dispatch({ type: SIGNUP_SUCCESS, payload: { data } });
+        handleNoti("success", "Đăng ký thành công","" );
       } catch (error) {
         dispatch({
           type: SIGNUP_FAILURE,
           payload: { error: error.response.data },
         });
+        handleNoti("error", "Đăng nhập thất bại","" );
       }
     };
   }

@@ -16,8 +16,10 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import {signup} from '../../redux/actionReducers/signUp';
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from 'react-router';
+import { Redirect, useLocation } from 'react-router';
+import {  Link as LinkRouter } from "react-router-dom";
 
+import qs from "qs";
 function Copyright() {
     return (
       <Typography variant="body2" color="textSecondary" align="center">
@@ -50,11 +52,12 @@ function Copyright() {
       margin: theme.spacing(3, 0, 2),
     },
   }));
-
+  
 export default  function DangKy() {
     const classes = useStyles();
     const dispatch = useDispatch();
-    // const {data} =  await usersignAPI.signup();
+    const { userInfo, isLoading, error } = useSelector((state) => state.signUp);
+    const location = useLocation();
     const formik = useFormik({
         initialValues: {
           taiKhoan: "",
@@ -88,6 +91,22 @@ export default  function DangKy() {
           console.log(values);
         },
       });
+      if (userInfo) {
+        const { redirectTo } = qs.parse(location.search, {
+          ignoreQueryPrefix: true,
+        });
+    
+        if (redirectTo) {
+          return <Redirect to={redirectTo} />;
+         
+        }
+        
+        
+       
+    
+        return <Redirect to="/dangnhap" />;
+      }
+     
     return (
         <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -205,9 +224,9 @@ export default  function DangKy() {
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              {/* <Redirect to="/dangnhap" variant="body2">
+              <LinkRouter to="/dangnhap" variant="body2">
                 Already have an account? Sign in
-              </Redirect> */}
+              </LinkRouter>
             </Grid>
           </Grid>
         </form>

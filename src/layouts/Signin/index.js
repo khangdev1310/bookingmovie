@@ -17,6 +17,7 @@ import * as Yup from "yup";
 import { signin } from "../../redux/actionReducers/userSign";
 import { useDispatch, useSelector } from "react-redux";
 import {  Redirect, useLocation } from "react-router-dom";
+import {  Link as LinkRouter } from "react-router-dom";
 
 import qs from "qs";
 function Copyright() {
@@ -80,10 +81,12 @@ export default function DangNhap() {
 
     if (redirectTo) {
       return <Redirect to={redirectTo} />;
+     
     }
-
+    
     return <Redirect to="/" />;
   }
+  
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -150,9 +153,9 @@ export default function DangNhap() {
               </Link>
             </Grid>
             <Grid item>
-              {/* <Redirect to="/dangky" variant="body2">
+              <LinkRouter to="/dangky" variant="body2">
                 {"Don't have an account? Sign Up"}
-              </Redirect> */}
+              </LinkRouter>
             </Grid>
           </Grid>
         </form>
