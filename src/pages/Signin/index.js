@@ -1,4 +1,4 @@
-import React from "react";
+import React , { useEffect } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -14,7 +14,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { signin } from "../../redux/actionReducers/userSign";
+import { signin } from "../../redux/action/userSignAction";
 import { useDispatch, useSelector } from "react-redux";
 import {  Redirect, useLocation } from "react-router-dom";
 import {  Link as LinkRouter } from "react-router-dom";
@@ -56,7 +56,9 @@ const useStyles = makeStyles((theme) => ({
 export default function DangNhap() {
   const classes = useStyles();
   const { userInfo, isLoading, error } = useSelector((state) => state.userSign);
+  
   const dispatch = useDispatch();
+  
   const location = useLocation();
   const formik = useFormik({
     initialValues: {

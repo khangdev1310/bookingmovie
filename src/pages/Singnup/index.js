@@ -14,7 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import {signup} from '../../redux/actionReducers/signUp';
+import {signup} from '../../redux/action/signUpAction';
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useLocation } from 'react-router';
 import {  Link as LinkRouter } from "react-router-dom";

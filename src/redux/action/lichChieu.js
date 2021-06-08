@@ -2,8 +2,8 @@ import {
     THONG_TIN_LICH_CHIEU_PHIM_REQUESTS,
     THONG_TIN_LICH_CHIEU_PHIM_SUCCESS,
     THONG_TIN_LICH_CHIEU_PHIM_FAILURE,
-  } from "../constanReducers/lichPhim";
-import thongtinlichphimAPI from '../../services/lichphimAPI'
+  } from "../constan/lichChieu";
+import thongtinlichphimAPI from '../../services/lichchieuAPI'
   
   
   export function thongtinlichchieuPhim(maPhim) {

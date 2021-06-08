@@ -1,9 +1,9 @@
-// Courses reducer
+// lichphim reducer
 import {
     THONG_TIN_LICH_CHIEU_PHIM_REQUESTS,
     THONG_TIN_LICH_CHIEU_PHIM_SUCCESS,
     THONG_TIN_LICH_CHIEU_PHIM_FAILURE,
-  } from "../constanReducers/lichPhim";
+  } from "../constan/lichChieu";
   
   const initialState = {
     courses: [],
@@ -11,7 +11,7 @@ import {
     error: null,
   };
   
-  function thongtinlichchieuPhim(state = initialState, action) {
+  export function thongtinlichchieuPhim(state = initialState, action) {
     switch (action.type) {
       case THONG_TIN_LICH_CHIEU_PHIM_REQUESTS: {
         return { ...state, isLoading: true, error: null };
@@ -27,5 +27,5 @@ import {
     }
   }
   
-  export default thongtinlichchieuPhim;
+
   

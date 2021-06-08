@@ -7,7 +7,8 @@ import Applayout from "./layouts/Applayout";
 import CarouselHeader from "./components/Carousel";
 import DangNhap from "./pages/Signin";
 import DangKy from "./pages/Singnup";
-
+import MovieTabs from "./pages/Movie";
+import MovieItem from './components/MovieItem'
 
 
 function App() {
@@ -29,14 +30,18 @@ function App() {
               </Switch> */}
           </Adminlayout>
         </Route>
-
+              {/* <Route path="/abc">
+                <MovieItem/>
+              </Route> */}
         <Route path="/dangnhap">
           <DangNhap/>
         </Route>
         <Route path="/dangky">
           <DangKy/>
         </Route>
-        
+        <Route path="/movie">
+          <MovieTabs/>
+        </Route>
         <Route path="/">
           <Applayout>
             {/* <Switch>

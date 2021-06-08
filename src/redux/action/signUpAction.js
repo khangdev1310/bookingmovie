@@ -1,5 +1,5 @@
 
-import { SIGNUP_REQUEST, SIGNUP_SUCCESS, SIGNUP_FAILURE } from "../constanReducers/signUp";
+import { SIGNUP_REQUEST, SIGNUP_SUCCESS, SIGNUP_FAILURE } from "../constan/signUpConstan";
 import usersignAPI from '../../services/usersAPI';
 import Swal from "sweetalert2";
 

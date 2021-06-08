@@ -1,4 +1,4 @@
-import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE } from "../constanReducers/userSign";
+import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE } from "../constan/userSignConstan";
 import usersignAPI from '../../services/usersAPI';
 import Swal from "sweetalert2";
 
