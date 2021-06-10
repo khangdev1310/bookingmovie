@@ -8,7 +8,8 @@ import CarouselHeader from "./components/Carousel";
 import DangNhap from "./pages/Signin";
 import DangKy from "./pages/Singnup";
 import MovieTabs from "./pages/Movie";
-import MovieItem from './components/MovieItem'
+import MovieCard from "./components/MovieCard";
+import RouterTest from "./pages/testRouter";
 
 
 function App() {
@@ -30,32 +31,38 @@ function App() {
               </Switch> */}
           </Adminlayout>
         </Route>
-              {/* <Route path="/abc">
-                <MovieItem/>
-              </Route> */}
+       
+        
         <Route path="/dangnhap">
-          <DangNhap/>
+          <DangNhap />
         </Route>
         <Route path="/dangky">
-          <DangKy/>
+          <DangKy />
         </Route>
-        <Route path="/movie">
-          <MovieTabs/>
-        </Route>
+        
+        {/* <Route path="/movie">
+          <MovieTabs />
+        </Route> */}
         <Route path="/">
           <Applayout>
-            {/* <Switch>
-              <Route path="/" exact>
+          
+            <Switch>
+            <Route path="/movie/:couresId">
+              <RouterTest/>
+            </Route>
+              {/* <Route path="/" exact>
                 <Home />
               </Route>
+              
               <Route path="/courses/:category">
                 <Coursess />
-              </Route>
+              </>
               <Route path="/course/:courseId">
                 <Course />
-              </Route>
-            </Switch> */}
+              </Route> */}
+            </Switch>
             <CarouselHeader />
+            <MovieTabs/>
           </Applayout>
         </Route>
       </Switch>

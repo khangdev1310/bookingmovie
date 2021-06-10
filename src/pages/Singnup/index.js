@@ -56,7 +56,7 @@ function Copyright() {
 export default  function DangKy() {
     const classes = useStyles();
     const dispatch = useDispatch();
-    const { userInfo, isLoading, error } = useSelector((state) => state.signUp);
+    const { userInfo, isLoading, error } = useSelector((state) => state.signupReducer);
     const location = useLocation();
     const formik = useFormik({
         initialValues: {

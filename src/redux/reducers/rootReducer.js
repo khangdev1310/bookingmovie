@@ -1,10 +1,11 @@
 import { combineReducers } from "redux";
 import { signReducer, signupReducer } from "./userSignReducer";
-
+import coursesReducer from '../reducers/CoursesReducer'
 
 const rootReducer = combineReducers({
-  userSign: signReducer,
-  signUp: signupReducer,
+   signReducer,
+   signupReducer,
+   coursesReducer,
   
 });
 

@@ -9,7 +9,7 @@ const handleNoti = (icon, title, text) => {
     text: `${text}`,
   });
 };
-export function signin(values) {
+export function signin1(values) {
   return async (dispatch) => {
     dispatch({ type: LOGIN_REQUEST });
 
