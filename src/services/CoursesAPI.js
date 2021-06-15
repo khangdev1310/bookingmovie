@@ -1,8 +1,8 @@
 import axiosClient from "../services/axiosClient";
 const coursesApi = {
 	MovieList: () => {
-		// const params = { MaNhom: "GP01" };
-		return axiosClient.get("/QuanLyPhim/LayDanhSachPhim?maNhom=GP12" );
+		const params = { MaNhom: "GP12" };
+		return axiosClient.get("/QuanLyPhim/LayDanhSachPhim",{params} );
 	},
 	getCoursesByCategory: (category) => {
 		const params = { maDanhMuc: category, MaNhom: "GP08" };

@@ -10,6 +10,8 @@ import DangKy from "./pages/Singnup";
 import MovieTabs from "./pages/Movie";
 import MovieCard from "./components/MovieCard";
 import RouterTest from "./pages/testRouter";
+import CumRap from "./components/LichChieuDetail/CumRap";
+import LichChieuHome from "./pages/Lichchieu/lichchieuHome";
 
 
 function App() {
@@ -40,9 +42,9 @@ function App() {
           <DangKy />
         </Route>
         
-        {/* <Route path="/movie">
-          <MovieTabs />
-        </Route> */}
+            <Route path="/lichchieu">
+              <LichChieuHome/>
+            </Route>
         <Route path="/">
           <Applayout>
           

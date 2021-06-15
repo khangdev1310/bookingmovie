@@ -18,21 +18,7 @@ const getCoursesByCategory = (category) => {
 		}
 	};
 };
-// export function getCourses () {
-// 	return async (dispatch) => {
-// 		dispatch({ type: GET_COURSES_REQUEST });
-// 		try {
-// 			const { data } = await coursesApi.MovieList();
-//             console.log(data);
-// 			dispatch({ type: GET_COURSES_SUCCESS, payload: { data } });
-// 		} catch (error) {
-// 			dispatch({
-// 				type: GET_COURSES_FAILURE,
-// 				payload: { error: error.response.data },
-// 			});
-// 		}
-// 	};
-// };
+
 export function getCourses() {
     return async (dispatch) => {
       dispatch({ type: GET_COURSES_REQUEST });
