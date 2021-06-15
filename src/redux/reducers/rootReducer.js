@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import { signReducer, signupReducer } from "./userSignReducer";
 import coursesReducer from '../reducers/CoursesReducer'
-import {hethongrapReducer,lichchieuhethongrapReducer,cumraptheohethongrapReducer} from '../reducers/quanlyrapReducer'
+import {hethongrapReducer,lichchieuhethongrapReducer,cumraptheohethongrapReducer,lichchieuphimhethongrapReducer} from '../reducers/quanlyrapReducer'
 
 const rootReducer = combineReducers({
    signReducer,
@@ -10,6 +10,7 @@ const rootReducer = combineReducers({
    hethongrapReducer,
    lichchieuhethongrapReducer,
    cumraptheohethongrapReducer,
+   lichchieuphimhethongrapReducer,
 
   
 });

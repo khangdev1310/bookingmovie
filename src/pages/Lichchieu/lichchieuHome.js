@@ -6,7 +6,9 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { useStyles } from "./style";
 import { useSelector, useDispatch } from "react-redux";
+import TabChild from './TabChild';
 import { getcumraptheohethongRap, gethethongRap, getlichchieuhethongRap, getlichchieuPhim } from "src/redux/action/quanlyrapActions";
+import { cumraptheohethongrapReducer, hethongrapReducer, lichchieuhethongrapReducer } from "src/redux/reducers/quanlyrapReducer";
 
 
 
@@ -49,25 +51,25 @@ export default function LichChieuHome() {
     const [value, setValue] = React.useState(0);
     const heThongRaps = useSelector((state) => state.hethongrapReducer.theater);
     const maHeThongRap = useSelector((state) => state.lichchieuhethongrapReducer.maHeThongRap);
-  
+   
    
     useEffect(() =>{
         dispatch(getlichchieuhethongRap())
-    },[])
-    useEffect(() => {
-        dispatch(getlichchieuPhim())
-    },[])
+    },[]);
+   
+    
     const renderHeThongRaps = () => {
       return heThongRaps.map((heThongRap, index) => {
         return (
           <Tab
             label={<img src={heThongRap.logo} width="50px" height="50px" />}
-            key={index}
-            // onClick={() => {
-            //   const maHeThongRap = heThongRap.maHeThongRap;
-            //   dispatch(getlichchieuhethongRap(maHeThongRap));
+            key={index}  onClick={() => {
+              const maHeThongRap = heThongRap.maHeThongRap;
+              dispatch(getlichchieuhethongRap(maHeThongRap));
+             
               
-            // }}
+            }}
+           
             {...a11yProps(Number(index))}
           />
         );
@@ -78,6 +80,7 @@ export default function LichChieuHome() {
       setValue(newValue);
     };
     return (
+      
         <div className={classes.bgColor} name="lichChieuBlock">
         <div className={classes.container}>
           <div className={classes.root}>
@@ -92,7 +95,7 @@ export default function LichChieuHome() {
               {renderHeThongRaps()}
             </Tabs>
             <TabPanel value={1} index={1}>
-             
+             <TabChild/>
             </TabPanel>
           </div>
         </div>

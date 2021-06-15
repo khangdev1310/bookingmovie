@@ -14,7 +14,7 @@ import { v4 as uuidv4 } from "uuid";
 // import lottecinema from "./../../../assets/lotte.jpeg";
 // import galaxycinema from "./../../../assets/galaxy.jpeg";
 // import cgv from "./../../../assets/cgv.png";
-
+import {lichchieuphimhethongrapReducer} from 'src/redux/reducers/quanlyrapReducer';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
 export default function TabChild() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-  const cumRaps = useSelector((state) => state.MovieReducer.cumRap);
+  const cumRaps = useSelector((state) => state.cumraptheohethongrapReducer.cumRap);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -101,7 +101,7 @@ export default function TabChild() {
               <Grid container spacing={0}>
                 <Grid container item xs={12} spacing={1}>
                   <Grid item xs={2}>
-                    <img src={bhdstarcineplex} width="40px" height="40px" />
+                    <img src="" width="40px" height="40px" />
                     {/* {renderRap(cumRaps[0].logo)} */}
                   </Grid>
                   <Grid item xs={10}>

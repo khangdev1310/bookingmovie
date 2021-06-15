@@ -32,6 +32,7 @@ export function getlichchieuhethongRap (category) {
 		try {
 			const { data } = await quanlyrapAPI.lichchieuhethongRap(category);
 			dispatch({ type: GET_QUANLYRAP_SUCCESS, payload: {data} });
+			console.log(data);
 		} catch (error) {
 			dispatch({
 				type: GET_QUANLYRAP_FAILURE,
@@ -65,6 +66,7 @@ export function getlichchieuPhim (category2) {
 		try {
 			const { data } = await quanlyrapAPI.lichchieuPhim(category2);
 			dispatch({ type: GET_QUANLYRAP_SUCCESS, payload: {data} });
+			console.log(data);
 		} catch (error) {
 			dispatch({
 				type: GET_QUANLYRAP_FAILURE,

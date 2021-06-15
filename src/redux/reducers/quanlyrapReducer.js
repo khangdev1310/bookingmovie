@@ -7,7 +7,7 @@ import {
   const initialState = {
     theater: [],
     maHeThongRap:"BHDStar",
-    cumRap:[],
+    cumRap: [],
     thongTinCumRap:null,
     isLoading: false,
     error: null,
@@ -50,7 +50,7 @@ import {
         return { ...state, isLoading: true, error: null };
       }
       case GET_QUANLYRAP_SUCCESS: {
-        return { ...state, maHeThongRap: action.payload.data, isLoading: false };
+        return { ...state, cumRap: action.payload.data, isLoading: false };
       }
       case GET_QUANLYRAP_FAILURE: {
         return { ...state, isLoading: false, error: action.payload.error };
@@ -66,7 +66,7 @@ import {
         return { ...state, isLoading: true, error: null };
       }
       case GET_QUANLYRAP_SUCCESS: {
-        return { ...state, CumRap: action.payload.data, isLoading: false };
+        return { ...state, thongTinCumRap: action.payload.data, isLoading: false };
       }
       case GET_QUANLYRAP_FAILURE: {
         return { ...state, isLoading: false, error: action.payload.error };
