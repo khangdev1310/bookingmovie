@@ -12,46 +12,54 @@ import MovieCard from "./components/MovieCard";
 import RouterTest from "./pages/testRouter";
 import CumRap from "./components/LichChieuDetail/CumRap";
 import LichChieuHome from "./pages/Lichchieu/lichchieuHome";
-
+import Dashboard from "./pages/AdminApp/Dashboard";
+import AdminRoute from "./Auth/AdminRoute";
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
         {/* Route Admin */}
-
+        <Redirect exact from="/admin" to="admin/dashboard"/>
         <Route path="/admin">
           <Adminlayout>
-            {/* <Switch>
-                <Redirect exact from="/admin" to="/admin/courses" />
-                <Route path="/admin/courses">
-                  <AdminCourses />
-                </Route>
-                <Route path="/admin/users">
-                  <AdminUsers />
-                </Route>
-              </Switch> */}
+            <Switch>
+              <AdminRoute
+                path="/admin/dashboard"
+                render={(props) => <Dashboard {...props} route="dashboard" />}
+              />
+              <AdminRoute
+                path="/admin/usermanagement"
+                render={(props) => (
+                  <Dashboard {...props} route="usermanagement" />
+                )}
+              />
+              <AdminRoute
+                path="/admin/filmmanagement"
+                render={(props) => (
+                  <Dashboard {...props} route="filmmanagement" />
+                )}
+              />
+            </Switch>
           </Adminlayout>
         </Route>
-       
-        
+
         <Route path="/dangnhap">
           <DangNhap />
         </Route>
         <Route path="/dangky">
           <DangKy />
         </Route>
-        
-            <Route path="/lichchieu">
-              <LichChieuHome/>
-            </Route>
+
+        <Route path="/lichchieu">
+          <LichChieuHome />
+        </Route>
         <Route path="/">
           <Applayout>
-          
             <Switch>
-            <Route path="/movie/:couresId">
-              <RouterTest/>
-            </Route>
+              <Route path="/movie/:couresId">
+                <RouterTest />
+              </Route>
               {/* <Route path="/" exact>
                 <Home />
               </Route>
@@ -64,7 +72,7 @@ function App() {
               </Route> */}
             </Switch>
             <CarouselHeader />
-            <MovieTabs/>
+            <MovieTabs />
           </Applayout>
         </Route>
       </Switch>
