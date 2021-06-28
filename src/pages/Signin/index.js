@@ -68,7 +68,7 @@ export default function DangNhap() {
     validationSchema: Yup.object({
       taiKhoan: Yup.string("Invalid account format").required("Required!"),
       matKhau: Yup.string()
-        .min(8, "Minimum 8 characters")
+        .min(6, "Minimum 6 characters")
         .required("Required!"),
     }),
     onSubmit: (values) => {
@@ -76,11 +76,14 @@ export default function DangNhap() {
       console.log(values);
     },
   });
+  
   if (userInfo) {
     const { redirectTo } = qs.parse(location.search, {
       ignoreQueryPrefix: true,
     });
-
+    if(userInfo.maLoaiNguoiDung === "QuanTri"){
+      return <Redirect to="/admin" />;
+    }
     if (redirectTo) {
       return <Redirect to={redirectTo} />;
      
@@ -88,6 +91,8 @@ export default function DangNhap() {
     
     return <Redirect to="/" />;
   }
+
+  
   
   return (
     <Container component="main" maxWidth="xs">

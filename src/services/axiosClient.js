@@ -36,6 +36,7 @@ axiosClient.interceptors.request.use(
       }
       if(error.status === 500) {
         // Xử lý thông báo cho người người server đang bị lỗi
+        console.log('Sever đang lỗi');
       }
   
       return Promise.reject(error);
