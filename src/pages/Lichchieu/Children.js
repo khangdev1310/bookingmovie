@@ -6,7 +6,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Box, Grid } from "@material-ui/core";
-// import GioChieuPhim from "./GioChieuPhim";
+import GioChieuPhim from "./GioChieuPhim";
 import { v4 as uuidv4 } from "uuid";
 
 const useStyles = makeStyles((theme) => ({
@@ -123,9 +123,9 @@ export default function ChildTabs({ phims }) {
             </Grid>
           </AccordionSummary>
           <AccordionDetails>
-            {/* <GioChieuPhim
+            <GioChieuPhim
               thongTinGioNgayChieus={thongTinPhim.lstLichChieuTheoPhim}
-            /> */}
+            />
           </AccordionDetails>
         </Accordion>
       );

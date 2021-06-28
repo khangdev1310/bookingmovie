@@ -51,21 +51,26 @@ export default function LichChieuHome() {
     const [value, setValue] = React.useState(0);
     const heThongRaps = useSelector((state) => state.hethongrapReducer.theater);
     const maHeThongRap = useSelector((state) => state.lichchieuhethongrapReducer.maHeThongRap);
-   
+    
    
     useEffect(() =>{
-        dispatch(getlichchieuhethongRap())
+        dispatch(getlichchieuhethongRap(maHeThongRap))
     },[]);
    
     
     const renderHeThongRaps = () => {
       return heThongRaps.map((heThongRap, index) => {
         return (
+          
           <Tab
             label={<img src={heThongRap.logo} width="50px" height="50px" />}
-            key={index}  onClick={() => {
-              const maHeThongRap = heThongRap.maHeThongRap;
-              dispatch(getlichchieuhethongRap(maHeThongRap));
+            
+            key={index}  
+            onClick={() => {
+              const category = heThongRap.maHeThongRap;
+              dispatch(getlichchieuhethongRap(category));
+              
+              
              
               
             }}
@@ -78,6 +83,7 @@ export default function LichChieuHome() {
   
     const handleChange = (event, newValue) => {
       setValue(newValue);
+      
     };
     return (
       
