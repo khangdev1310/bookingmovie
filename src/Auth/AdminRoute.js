@@ -5,7 +5,7 @@ export default function AdminRoute({child,...props}) {
 
     const { userInfo, isLoading, error } = useSelector((state) => state.signReducer);
     if(!userInfo){
-        return <Redirect to={`/dangnhap`}/>
+        return <Redirect to={`/admin-dangnhap`}/>
     }
     
 

@@ -44,10 +44,13 @@ function App() {
           </Adminlayout>
         </Route>
 
-        <Route path="/dangnhap">
+        <Route path="/admin-dangnhap">
           <DangNhap />
         </Route>
-        <Route path="/dangky">
+        <Route path="/signin">
+          <DangNhap />
+        </Route>
+        <Route path="/signup">
           <DangKy />
         </Route>
 
