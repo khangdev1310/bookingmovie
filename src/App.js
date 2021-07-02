@@ -44,9 +44,18 @@ function App() {
           </Adminlayout>
         </Route>
 
+<<<<<<< HEAD
         <Route path="/signin">
           <DangNhap />
         </Route>
+=======
+        <Route path="/admin-dangnhap">
+          <DangNhap />
+        </Route>
+        <Route path="/signin">
+          <DangNhap />
+        </Route>
+>>>>>>> 7f6aabc3877974396398f5d94af12d72c9dadf5b
         <Route path="/signup">
           <DangKy />
         </Route>
