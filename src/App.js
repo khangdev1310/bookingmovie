@@ -8,13 +8,11 @@ import CarouselHeader from "./components/Carousel";
 import DangNhap from "./pages/Signin";
 import DangKy from "./pages/Singnup";
 import MovieTabs from "./pages/Movie";
-import MovieCard from "./components/MovieCard";
-import RouterTest from "./pages/testRouter";
-import CumRap from "./components/LichChieuDetail/CumRap";
+import Home from './pages/Home';
 import LichChieuHome from "./pages/Lichchieu/lichchieuHome";
 import Dashboard from "./pages/AdminApp/Dashboard";
 import AdminRoute from "./Auth/AdminRoute";
-
+import Detail from './pages/MovieDetail';
 function App() {
   return (
     <BrowserRouter>
@@ -45,13 +43,16 @@ function App() {
         </Route>
 
 
-        <Route path="/signin">
-          <DangNhap />
-        </Route>
+        
 
         <Route path="/admin-dangnhap">
           <DangNhap />
         </Route>
+
+          <Route path="/123">
+            <Detail />
+            </Route>        
+
         <Route path="/signin">
           <DangNhap />
         </Route>
@@ -59,29 +60,26 @@ function App() {
         <Route path="/signup">
           <DangKy />
         </Route>
-
+        
         <Route path="/lichchieu">
           <LichChieuHome />
         </Route>
         <Route path="/">
           <Applayout>
             <Switch>
-              <Route path="/movie/:couresId">
-                <RouterTest />
+              
+              <Route path="/" exact>
+                <Home/>
               </Route>
-              {/* <Route path="/" exact>
-                <Home />
+
+              <Route path="/movie/:couresId">
+              <Detail />
               </Route>
               
-              <Route path="/courses/:category">
-                <Coursess />
-              </>
-              <Route path="/course/:courseId">
-                <Course />
-              </Route> */}
             </Switch>
-            <CarouselHeader />
-            <MovieTabs />
+            {/* <CarouselHeader /> */}
+            {/* <MovieTabs /> */}
+            <LichChieuHome />
           </Applayout>
         </Route>
       </Switch>

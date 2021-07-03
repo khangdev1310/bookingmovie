@@ -9,6 +9,9 @@ import {
     maHeThongRap:"BHDStar",
     cumRap: [],
     thongTinCumRap:null,
+    movieDetail:null,
+    searchMovieFind:null,
+    movieDetailLichChieu:null,
     isLoading: false,
     error: null,
   };
@@ -66,7 +69,7 @@ import {
         return { ...state, isLoading: true, error: null };
       }
       case GET_QUANLYRAP_SUCCESS: {
-        return { ...state, thongTinCumRap: action.payload.data, isLoading: false };
+        return { ...state, movieDetail: action.payload.data, isLoading: false };
       }
       case GET_QUANLYRAP_FAILURE: {
         return { ...state, isLoading: false, error: action.payload.error };
@@ -75,4 +78,5 @@ import {
         return state;
     }
   }
+  
   
