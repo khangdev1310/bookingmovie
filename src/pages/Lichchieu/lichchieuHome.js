@@ -53,9 +53,10 @@ export default function LichChieuHome() {
     const maHeThongRap = useSelector((state) => state.lichchieuhethongrapReducer.maHeThongRap);
     
    
-    useEffect(() =>{
-        dispatch(getlichchieuhethongRap(maHeThongRap))
-    },[]);
+    // useEffect(() =>{
+    //     dispatch(getlichchieuhethongRap(maHeThongRap))
+       
+    // },[]);
    
     
     const renderHeThongRaps = () => {
@@ -67,8 +68,9 @@ export default function LichChieuHome() {
             
             key={index}  
             onClick={() => {
-              const category = heThongRap.maHeThongRap;
-              dispatch(getlichchieuhethongRap(category));
+              // const category = heThongRap.maHeThongRap;
+              // dispatch(getlichchieuhethongRap(category));
+              
               
               
              
