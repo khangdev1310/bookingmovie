@@ -9,7 +9,6 @@ import DangNhap from "./pages/Signin";
 import DangKy from "./pages/Singnup";
 import MovieTabs from "./pages/Movie";
 import MovieCard from "./components/MovieCard";
-import RouterTest from "./pages/testRouter";
 import CumRap from "./components/LichChieuDetail/CumRap";
 import LichChieuHome from "./pages/Lichchieu/lichchieuHome";
 import Dashboard from "./pages/AdminApp/Dashboard";
@@ -60,9 +59,6 @@ function App() {
         <Route path="/">
           <Applayout>
             <Switch>
-              <Route path="/movie/:couresId">
-                <RouterTest />
-              </Route>
               {/* <Route path="/" exact>
                 <Home />
               </Route>
