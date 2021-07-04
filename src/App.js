@@ -8,19 +8,20 @@ import CarouselHeader from "./components/Carousel";
 import DangNhap from "./pages/Signin";
 import DangKy from "./pages/Singnup";
 import MovieTabs from "./pages/Movie";
-import Home from './pages/Home';
+import Home from "./pages/Home";
 import LichChieuHome from "./pages/Lichchieu/lichchieuHome";
 import Dashboard from "./pages/AdminApp/Dashboard";
 import AdminRoute from "./Auth/AdminRoute";
-import Detail from './pages/MovieDetail';
+import Detail from "./pages/MovieDetail";
 import ApplicationPhone from "./components/ApplicationPhone";
-import News from './pages/News/index';
+import SearchMovie from "./components/SearchMovie/index";
+import News from "./pages/News/index";
 function App() {
   return (
     <BrowserRouter>
       <Switch>
         {/* Route Admin */}
-        <Redirect exact from="/admin" to="admin/dashboard"/>
+        <Redirect exact from="/admin" to="admin/dashboard" />
         <Route path="/admin">
           <Adminlayout>
             <Switch>
@@ -47,10 +48,10 @@ function App() {
           <DangNhap />
         </Route>
 
-          <Route path="/123">
-            <Detail />
-            </Route>        
-                  
+        <Route path="/123">
+          <Detail />
+        </Route>
+
         <Route path="/signin">
           <DangNhap />
         </Route>
@@ -58,7 +59,7 @@ function App() {
         <Route path="/signup">
           <DangKy />
         </Route>
-        
+
         <Route path="/lichchieu">
           <LichChieuHome />
         </Route>
@@ -66,17 +67,18 @@ function App() {
           <Applayout>
             <Switch>
               <Route path="/" exact>
-                <Home/>
+                <Home />
               </Route>
               <Route path="/movie/:couresId">
-              <Detail />
-              </Route>  
+                <Detail />
+              </Route>
             </Switch>
             {/* <CarouselHeader /> */}
             {/* <MovieTabs /> */}
-             <LichChieuHome /> 
-            <News/>
-            <ApplicationPhone/> 
+            <SearchMovie />
+            <LichChieuHome />
+            <News />
+            <ApplicationPhone />
           </Applayout>
         </Route>
       </Switch>
