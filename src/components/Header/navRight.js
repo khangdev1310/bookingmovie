@@ -58,7 +58,7 @@ export default function NavRight({ open }) {
           <a className="nav-mobile-text">Cụm Rạp</a>
         </li>
         <li className="nav-mobile-menu">
-          <a className="nav-mobile-text">Tin Tức</a>
+          <a className="nav-mobile-text" href="#news">Tin Tức</a>
         </li>
         <li className="nav-mobile-menu">
           <a className="nav-mobile-text">Liên Hệ</a>

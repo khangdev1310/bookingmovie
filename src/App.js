@@ -14,6 +14,7 @@ import Dashboard from "./pages/AdminApp/Dashboard";
 import AdminRoute from "./Auth/AdminRoute";
 import Detail from './pages/MovieDetail';
 import ApplicationPhone from "./components/ApplicationPhone";
+import News from './pages/News/index';
 function App() {
   return (
     <BrowserRouter>
@@ -73,8 +74,9 @@ function App() {
             </Switch>
             {/* <CarouselHeader /> */}
             {/* <MovieTabs /> */}
-            <LichChieuHome />
-            <ApplicationPhone/>
+             <LichChieuHome /> 
+            <News/>
+            <ApplicationPhone/> 
           </Applayout>
         </Route>
       </Switch>
