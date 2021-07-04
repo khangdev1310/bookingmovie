@@ -7,13 +7,10 @@ import Applayout from "./layouts/Applayout";
 
 import DangNhap from "./pages/Signin";
 import DangKy from "./pages/Singnup";
-<<<<<<< HEAD
-
 import Home from './pages/Home';
-=======
-import MovieTabs from "./pages/Movie";
+
 import Home from "./pages/Home";
->>>>>>> 2a8dcac4c7e7d6199455d01dcfed70cf6bc1136a
+
 import LichChieuHome from "./pages/Lichchieu/lichchieuHome";
 import Dashboard from "./pages/AdminApp/Dashboard";
 import AdminRoute from "./Auth/AdminRoute";
@@ -78,16 +75,13 @@ function App() {
                 <Detail />
               </Route>
             </Switch>
-<<<<<<< HEAD
-            
-=======
-            {/* <CarouselHeader /> */}
-            {/* <MovieTabs /> */}
+
+           
             <SearchMovie />
             <LichChieuHome />
             <News />
             <ApplicationPhone />
->>>>>>> 2a8dcac4c7e7d6199455d01dcfed70cf6bc1136a
+
           </Applayout>
         </Route>
       </Switch>
