@@ -13,6 +13,7 @@ import LichChieuHome from "./pages/Lichchieu/lichchieuHome";
 import Dashboard from "./pages/AdminApp/Dashboard";
 import AdminRoute from "./Auth/AdminRoute";
 import Detail from './pages/MovieDetail';
+import ApplicationPhone from "./components/ApplicationPhone";
 function App() {
   return (
     <BrowserRouter>
@@ -41,10 +42,6 @@ function App() {
             </Switch>
           </Adminlayout>
         </Route>
-
-
-        
-
         <Route path="/admin-dangnhap">
           <DangNhap />
         </Route>
@@ -52,7 +49,7 @@ function App() {
           <Route path="/123">
             <Detail />
             </Route>        
-
+                  
         <Route path="/signin">
           <DangNhap />
         </Route>
@@ -77,6 +74,7 @@ function App() {
             {/* <CarouselHeader /> */}
             {/* <MovieTabs /> */}
             <LichChieuHome />
+            <ApplicationPhone/>
           </Applayout>
         </Route>
       </Switch>
