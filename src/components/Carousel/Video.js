@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-
+import {items} from './itemVideo';
 const MyVerticallyCenteredModal = (props) => {
+  console.log(items[props.keyPhim]);
     return (
       <Modal
         {...props}
@@ -13,28 +14,30 @@ const MyVerticallyCenteredModal = (props) => {
       >
         <Modal.Body>
           <iframe
-            src="https://www.youtube.com/embed/SGlBQR-ftVI"
+            // src={props.trailerPhim}
+            src = {items[props.keyPhim].trailer}
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
             style={{ width: "100%", height: "100%" }}
           ></iframe>
+          
         </Modal.Body>
       </Modal>
     );
   };
 
-  const Video = () => {
-    const [modalShow, setModalShow] = React.useState(false);
-
+  const Video = ({showFrame,trailer,keyIndex}) => {
+    const [modalShow, setModalShow] = React.useState(true);
+    console.log(keyIndex);
     return (
       <>
-        <Button onClick={() => setModalShow(true)}></Button>
-
         <MyVerticallyCenteredModal
-          show={modalShow}
+          show={showFrame}
           onHide={() => setModalShow(false)}
+          trailerPhim={trailer}
+          keyPhim = {keyIndex}
         />
       </>
     );

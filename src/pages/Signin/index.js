@@ -160,7 +160,7 @@ export default function DangNhap() {
               </Link>
             </Grid>
             <Grid item>
-              <LinkRouter to="/dangky" variant="body2">
+              <LinkRouter to="/signup" variant="body2">
                 {"Don't have an account? Sign Up"}
               </LinkRouter>
             </Grid>

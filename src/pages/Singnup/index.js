@@ -100,11 +100,7 @@ export default  function DangKy() {
           return <Redirect to={redirectTo} />;
          
         }
-        
-        
-       
-    
-        return <Redirect to="/dangnhap" />;
+        return <Redirect to="/signin" />;
       }
      
     return (
@@ -224,7 +220,7 @@ export default  function DangKy() {
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              <LinkRouter to="/dangnhap" variant="body2">
+              <LinkRouter to="/signin" variant="body2">
                 Already have an account? Sign in
               </LinkRouter>
             </Grid>
