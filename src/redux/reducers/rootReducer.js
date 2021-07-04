@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import { signReducer, signupReducer } from "./userSignReducer";
-import coursesReducer from "../reducers/CoursesReducer";
+import {coursesReducer,coursesDetailsReducer} from "../reducers/CoursesReducer";
 import {
   hethongrapReducer,
   lichchieuhethongrapReducer,
@@ -12,10 +12,13 @@ const rootReducer = combineReducers({
   signReducer,
   signupReducer,
   coursesReducer,
+  coursesDetailsReducer,
   hethongrapReducer,
   lichchieuhethongrapReducer,
   cumraptheohethongrapReducer,
   lichchieuphimhethongrapReducer,
+  
+  
   admin: adminReducer,
   adminFilm: adminFilmReducer
 });

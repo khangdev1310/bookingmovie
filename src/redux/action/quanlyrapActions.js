@@ -43,13 +43,13 @@ export function getlichchieuhethongRap (category) {
 };
 
 // Lay thong tin cum rap theo he thong rap
-export function getcumraptheohethongRap (category1) {
+export function getcumraptheohethongRap (maHeThongRap) {
 	return async (dispatch) => {
 		dispatch({ type: GET_QUANLYRAP_REQUEST });
 		try {
-			const { data } = await quanlyrapAPI.cumraptheohethongRap(category1);
+			const { data } = await quanlyrapAPI.cumraptheohethongRap(maHeThongRap);
 			dispatch({ type: GET_QUANLYRAP_SUCCESS, payload: {data} });
-            console.log(data);
+            
 		} catch (error) {
 			dispatch({
 				type: GET_QUANLYRAP_FAILURE,
@@ -60,18 +60,3 @@ export function getcumraptheohethongRap (category1) {
 };
 
 // Lay thong tin cum rap theo he thong rap
-export function getlichchieuPhim (category2) {
-	return async (dispatch) => {
-		dispatch({ type: GET_QUANLYRAP_REQUEST });
-		try {
-			const { data } = await quanlyrapAPI.lichchieuPhim(category2);
-			dispatch({ type: GET_QUANLYRAP_SUCCESS, payload: {data} });
-			console.log(data);
-		} catch (error) {
-			dispatch({
-				type: GET_QUANLYRAP_FAILURE,
-				payload: { error: error.response.data },
-			});
-		}
-	};
-};

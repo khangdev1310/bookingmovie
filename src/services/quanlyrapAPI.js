@@ -6,18 +6,13 @@ const quanlyrapAPI = {
 	},
 	lichchieuhethongRap: (category) => {
 		const params = { maHeThongRap: category, MaNhom: "GP12" };
-		return axiosClient.get("/QuanLyRap/LayThongTinLichChieuHeThongRap", {
-			params,
-		});
+		return axiosClient.get("/QuanLyRap/LayThongTinLichChieuHeThongRap", {params});
 	},
-    cumraptheohethongRap: (category1) => {
-		const params = { maHeThongRap: category1 };
+    cumraptheohethongRap: (maHeThongRap) => {
+		const params = { maHeThongRap };
 		return axiosClient.get("/QuanLyRap/LayThongTinCumRapTheoHeThong", {params});
 	},
-    lichchieuPhim: (category2) => {
-        const params = { maPhim: category2 };
-		return axiosClient.get("/QuanLyRap/LayThongTinLichChieuPhim", {params});
-    }
+    
 };
 export default quanlyrapAPI;
 /*

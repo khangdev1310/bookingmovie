@@ -6,10 +6,11 @@ import {
 
 const initialState = {
   courses1: [],
+  movieDetail:null,
   isLoading: false,
   error: null,
 };
-function coursesReducer(state = initialState, action) {
+export function coursesReducer(state = initialState, action) {
   switch (action.type) {
     case GET_COURSES_REQUEST: {
       return { ...state, isLoading: true, error: null };
@@ -24,6 +25,21 @@ function coursesReducer(state = initialState, action) {
       return state;
   }
 }
-export default coursesReducer;
+export function coursesDetailsReducer(state = initialState, action) {
+  switch (action.type) {
+    case GET_COURSES_REQUEST: {
+      return { ...state, isLoading: true, error: null };
+    }
+    case GET_COURSES_SUCCESS: {
+      return { ...state, movieDetail: action.payload.data, isLoading: false };
+    }
+    case GET_COURSES_FAILURE: {
+      return { ...state, isLoading: false, error: action.payload.error };
+    }
+    default:
+      return state;
+  }
+}
+
 
 

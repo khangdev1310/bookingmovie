@@ -4,10 +4,10 @@ import "./css/index.css";
 import "./styles";
 
 import Applayout from "./layouts/Applayout";
-import CarouselHeader from "./components/Carousel";
+
 import DangNhap from "./pages/Signin";
 import DangKy from "./pages/Singnup";
-import MovieTabs from "./pages/Movie";
+
 import Home from './pages/Home';
 import LichChieuHome from "./pages/Lichchieu/lichchieuHome";
 import Dashboard from "./pages/AdminApp/Dashboard";
@@ -77,9 +77,7 @@ function App() {
               </Route>
               
             </Switch>
-            {/* <CarouselHeader /> */}
-            {/* <MovieTabs /> */}
-            <LichChieuHome />
+            
           </Applayout>
         </Route>
       </Switch>

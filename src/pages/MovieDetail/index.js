@@ -37,10 +37,10 @@ import {
   import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
   import Rating from "@material-ui/lab/Rating";
   import Swal from "sweetalert2";
- 
+  import {getCoursesDetails} from '../../redux/action/CoursesActions';
   import StarHalfIcon from "@material-ui/icons/StarHalf";
 import LichChieuHome from "../Lichchieu/lichchieuHome";
-import { getlichchieuPhim } from "../../redux/action/quanlyrapActions";
+
   
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -78,7 +78,7 @@ import { getlichchieuPhim } from "../../redux/action/quanlyrapActions";
   const Detail = (props) => {
     const classes = useStyle();
     const thongTinPhim = useSelector(
-      (state) => state.lichchieuphimhethongrapReducer.movieDetail
+      (state) => state.coursesDetailsReducer.movieDetail
     );
     const [value, setValue] = useState(0);
     const [open, setOpen] = useState(false);
@@ -98,10 +98,9 @@ import { getlichchieuPhim } from "../../redux/action/quanlyrapActions";
     };
   
     useEffect(() => {
-      dispatch(getlichchieuPhim);
+      dispatch(getCoursesDetails());
         
-      console.log(getlichchieuPhim)
-
+      
     }, []);
   
     

@@ -8,7 +8,7 @@ import { useStyles } from "./style";
 import { useSelector, useDispatch } from "react-redux";
 import TabChild from './TabChild';
 import { getcumraptheohethongRap, gethethongRap, getlichchieuhethongRap, getlichchieuPhim } from "src/redux/action/quanlyrapActions";
-import { cumraptheohethongrapReducer, hethongrapReducer, lichchieuhethongrapReducer } from "src/redux/reducers/quanlyrapReducer";
+import { changemahethongReducer, cumraptheohethongrapReducer, hethongrapReducer, lichchieuhethongrapReducer, lichchieuphimhethongrapReducer } from "src/redux/reducers/quanlyrapReducer";
 
 
 
@@ -53,12 +53,12 @@ export default function LichChieuHome() {
     const maHeThongRap = useSelector((state) => state.lichchieuhethongrapReducer.maHeThongRap);
     
    
-    // useEffect(() =>{
-    //     dispatch(getlichchieuhethongRap(maHeThongRap))
-       
-    // },[]);
+    useEffect(() =>{
+        dispatch(getlichchieuhethongRap())
+        
+    },[]);
    
-    
+   
     const renderHeThongRaps = () => {
       return heThongRaps.map((heThongRap, index) => {
         return (
@@ -68,8 +68,11 @@ export default function LichChieuHome() {
             
             key={index}  
             onClick={() => {
-              // const category = heThongRap.maHeThongRap;
-              // dispatch(getlichchieuhethongRap(category));
+              const maHeThongRap = heThongRap.maHeThongRap;
+              // dispatch(getlichchieuhethongRap(maHeThongRap));
+              
+              
+              
               
               
               
