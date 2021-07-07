@@ -9,7 +9,8 @@ export default function MovieCard({movie}) {
     const classes = useStyles();
     return (
       <div className={classes.item}>
-      <Box className={classes.poster}>
+        
+        <Box className={classes.poster}>
         <img
           src={hinhAnh}
           alt={biDanh}
@@ -40,16 +41,17 @@ export default function MovieCard({movie}) {
 
         <Box className={classes.buyTicketContainer}>
           <Link
-            to={`/movie/${movie?.biDanh}-${movie?.maPhim}`}
+            to={`/movie/${movie?.maPhim}`}
             style={{ textDecoration: "none" }}
           >
             <Button variant="contained" className={classes.buyTicketButton}>
-              MUA VÉ
+              Chi tiết
             </Button>
           </Link>
         </Box>
         <div className={classes.overlay}></div>
       </Box>
+      
     </div>
     )
 }

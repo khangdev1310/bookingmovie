@@ -65,6 +65,6 @@ export const useStyles = makeStyles((theme) => ({
     transform: "translate(-50%, 0)",
     padding: "0.5rem 1.5rem",
     backgroundColor: "rgba(231,71,243, 0.9)",
-    color: "#FAFAFA",
+    color: "#000",
   },
 }));

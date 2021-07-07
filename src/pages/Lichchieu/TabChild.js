@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
 export default function TabChild() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-  const cumRaps = useSelector((state) => state.cumraptheohethongrapReducer.cumRap);
+  const cumRaps = useSelector((state) => state.lichchieuhethongrapReducer.cumRap);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

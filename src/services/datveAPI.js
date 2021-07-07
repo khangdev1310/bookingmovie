@@ -1,13 +1,13 @@
 import axiosClient from "./axiosClient";
 
 const datveAPI = {
-  danhsachphongVe: (id) => {
-    const params = { MaLichChieu: "id"};
+  danhsachphongVe: (maLichChieu) => {
+    const params = { MaLichChieu: maLichChieu};
 		return axiosClient.get("QuanLyDatVe/LayDanhSachPhongVe",{params} );
   },
- thongtindatphongVe: (id) => {
-    const params = { MaLichChieu: "id"};
-		return axiosClient.get("QuanLyDatVe/DatVe",{params} );
+ thongtindatphongVe: () => {
+    
+		return axiosClient.post("QuanLyDatVe/DatVe" );
   },
   
 };

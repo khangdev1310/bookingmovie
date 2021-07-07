@@ -12,6 +12,9 @@ const quanlyrapAPI = {
 		const params = { maHeThongRap };
 		return axiosClient.get("/QuanLyRap/LayThongTinCumRapTheoHeThong", {params});
 	},
+	lichchieuphimhethongRap:(maPhim) => {
+		return axiosClient.get(`/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${maPhim}` );
+	}
     
 };
 export default quanlyrapAPI;

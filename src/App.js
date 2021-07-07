@@ -9,15 +9,16 @@ import DangNhap from "./pages/Signin";
 import DangKy from "./pages/Singnup";
 import Home from './pages/Home';
 
-import Home from "./pages/Home";
+
 
 import LichChieuHome from "./pages/Lichchieu/lichchieuHome";
 import Dashboard from "./pages/AdminApp/Dashboard";
 import AdminRoute from "./Auth/AdminRoute";
 import Detail from "./pages/MovieDetail";
-import ApplicationPhone from "./components/ApplicationPhone";
-import SearchMovie from "./components/SearchMovie/index";
+
+
 import News from "./pages/News/index";
+import PhongVe from './pages/phongve';
 function App() {
   return (
     <BrowserRouter>
@@ -50,10 +51,10 @@ function App() {
           <DangNhap />
         </Route>
 
-        <Route path="/123">
-          <Detail />
-        </Route>
-
+        
+         <Route path="/phongve">
+           <PhongVe/>
+           </Route>         
         <Route path="/signin">
           <DangNhap />
         </Route>
@@ -71,16 +72,15 @@ function App() {
               <Route path="/" exact>
                 <Home />
               </Route>
-              <Route path="/movie/:couresId">
+              <Route path="/movie/:id">
                 <Detail />
               </Route>
             </Switch>
 
            
-            <SearchMovie />
-            <LichChieuHome />
-            <News />
-            <ApplicationPhone />
+            
+            {/* <News />  */}
+            
 
           </Applayout>
         </Route>

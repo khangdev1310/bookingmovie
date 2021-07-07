@@ -17,7 +17,7 @@ import {
   import Tab from "@material-ui/core/Tab";
   import { Link } from "react-router-dom";
   import "./style.css";
-
+  import { useParams } from "react-router-dom";
   import GradeIcon from "@material-ui/icons/Grade";
   import SendIcon from "@material-ui/icons/Send";
   import VisibilityIcon from "@material-ui/icons/Visibility";
@@ -26,7 +26,6 @@ import {
   import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
   import { useSelector, useDispatch } from "react-redux";
  
-  
   import { makeStyles } from "@material-ui/core/styles";
   import Modal from "@material-ui/core/Modal";
   import Backdrop from "@material-ui/core/Backdrop";
@@ -84,7 +83,8 @@ import LichChieuHome from "../Lichchieu/lichchieuHome";
     const [open, setOpen] = useState(false);
     let [limit, setLimit] = useState(5);
     const dispatch = useDispatch();
-  
+    const {id} = useParams();
+   
     const handleOpen = () => {
       setOpen(true);
     };
@@ -98,7 +98,7 @@ import LichChieuHome from "../Lichchieu/lichchieuHome";
     };
   
     useEffect(() => {
-      dispatch(getCoursesDetails());
+      dispatch(getCoursesDetails(id));
         
       
     }, []);
@@ -255,11 +255,11 @@ import LichChieuHome from "../Lichchieu/lichchieuHome";
                                     }}
                                   >
                                     <div
-                                    //   className={`c100 p${
-                                    //     courses1?.danhGia.length > 0
-                                    //       ? courses1?.danhGia
-                                    //       : courses1?.danhGia + "0"
-                                    //   }`}
+                                      className={`c100 p${
+                                        thongTinPhim?.danhGia.length > 0
+                                          ? thongTinPhim?.danhGia
+                                          : thongTinPhim?.danhGia + "0"
+                                      }`}
                                     >
                                       <span>{thongTinPhim?.danhGia}</span>
                                       <div className="slice">

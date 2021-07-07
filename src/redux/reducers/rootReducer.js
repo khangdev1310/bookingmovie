@@ -8,6 +8,7 @@ import {
   lichchieuphimhethongrapReducer,
 } from "../reducers/quanlyrapReducer";
 import { adminReducer,adminFilmReducer } from "../reducers/admin";
+import {danhsachphongveReducer} from '../reducers/datveReducer';
 const rootReducer = combineReducers({
   signReducer,
   signupReducer,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   lichchieuhethongrapReducer,
   cumraptheohethongrapReducer,
   lichchieuphimhethongrapReducer,
+  danhsachphongveReducer,
   
   
   admin: adminReducer,
